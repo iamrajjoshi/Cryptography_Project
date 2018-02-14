@@ -15,8 +15,10 @@ vector<int> key()
 	key[2][0] = 4 * n*n + 4 * n + 1;
 	key[2][1] = n;
 	key[2][2] = 2 * n - 1;
-	for (int i = 0; i < 3; ++i) {
-		for (int j = 0; j < 3; ++j) {
+	for (int i = 0; i < 3; ++i) 
+	{
+		for (int j = 0; j < 3; ++j) 
+		{
 			keyVector.push_back(key[i][j]);
 			cout << "key" << i << " " << j << " = " << key[i][j] << endl;// Debugging Statement
 		}
