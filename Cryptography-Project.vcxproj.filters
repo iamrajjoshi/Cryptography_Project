@@ -26,5 +26,8 @@
     <ClInclude Include="FunctionNames.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InverseKey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

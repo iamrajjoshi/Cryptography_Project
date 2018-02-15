@@ -18,9 +18,11 @@ using namespace std;
 
 #include "FunctionNames.h"
 #include "key.h"
+#include "InverseKey.h"
 
 int main() 
 {
-	key();
+	vector <int> keyVector = key();
+	inverseKey(keyVector);
 	return 0;
 }

@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FunctionNames.h" />
+    <ClInclude Include="InverseKey.h" />
     <ClInclude Include="Key.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
