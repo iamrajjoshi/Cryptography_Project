@@ -22,9 +22,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="E-D.h" />
     <ClInclude Include="FunctionNames.h" />
-    <ClInclude Include="InverseKey.h" />
-    <ClInclude Include="Key.h" />
+    <ClInclude Include="Decrypt.h" />
+    <ClInclude Include="Encrypt.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

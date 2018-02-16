@@ -20,13 +20,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Key.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FunctionNames.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InverseKey.h">
+    <ClInclude Include="Decrypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Encrypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E-D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
