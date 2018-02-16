@@ -22,7 +22,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="E-D.h" />
+    <ClInclude Include="MatrixMultiplication.h" />
     <ClInclude Include="FunctionNames.h" />
     <ClInclude Include="Decrypt.h" />
     <ClInclude Include="Encrypt.h" />

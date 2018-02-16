@@ -29,7 +29,7 @@
     <ClInclude Include="Encrypt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="E-D.h">
+    <ClInclude Include="MatrixMultiplication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

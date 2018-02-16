@@ -18,7 +18,7 @@
 using namespace std;
 
 #include "FunctionNames.h"
-#include "E-D.h"
+#include "MatrixMultiplication.h"
 #include "Encrypt.h"
 #include "Decrypt.h"
 
@@ -63,5 +63,4 @@ int main()
 		}
 		system("CLS");
 	}
-	system("pause");
 }

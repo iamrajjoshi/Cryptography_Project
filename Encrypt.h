@@ -1,5 +1,5 @@
 void CreateFile() {
-	cout << "Please enter the name of the file you want to save the message in: ";
+	cout << "Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
 	name = name + ".txt";
 	cypherFile.open(name);
@@ -32,7 +32,8 @@ vector <int> GetMessage() {
 	int a;
 	cin.ignore();
 	getline(cin, message);
-	for (int i = 0; i < message.size(); ++i) {
+	for (int i = 0; i < message.size(); ++i)
+	{
 		a = message[i];
 		message2.push_back(a);
 	}
@@ -84,10 +85,12 @@ vector<vector<int>> InverseMatrix()
 }
 
 
-vector<vector<int>> GroupMessage() {
+vector<vector<int>> GroupMessage()
+{
 	int extra;
 	int k = 0;
-	switch (message2.size() % 3) {
+	switch (message2.size() % 3)
+	{
 	case 0:
 		extra = 0;
 		break;
@@ -98,11 +101,14 @@ vector<vector<int>> GroupMessage() {
 		extra = 1;
 		break;
 	}
-	for (; extra > 0; --extra) {
+	for (; extra > 0; --extra)
+	{
 		message2.push_back(0);
 	}
-	for (int i = 0; i < message2.size() / 3; i++) {
-		for (int j = 0; j < 3; j++, k++) {
+	for (int i = 0; i < message2.size() / 3; i++)
+	{
+		for (int j = 0; j < 3; j++, k++)
+		{
 			grouped[i][j] = message2[k];
 		}
 	}
