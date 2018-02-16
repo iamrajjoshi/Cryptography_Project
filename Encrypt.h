@@ -40,9 +40,9 @@ vector <int> GetMessage() {
 }
 
 
-vector<vector<int>> MatrixKey() 
+vector<vector<int>> MatrixKey()
 {
-	
+
 	srand(time(NULL));
 	int determinant = 1;
 	do
@@ -64,7 +64,7 @@ vector<vector<int>> MatrixKey()
 }
 
 
-vector<vector<int>> InverseMatrix() 
+vector<vector<int>> InverseMatrix()
 {
 	MatrixKey();
 	int determinant = 0;
@@ -75,8 +75,8 @@ vector<vector<int>> InverseMatrix()
 
 		for (int j = 0; j < 3; j++)
 		{
-			inverse[j][i] = ((key[(j + 1) % 3][(i + 1) % 3] * key[(j + 2) % 3][(i + 2) % 3]) - 
-							(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3])) / determinant;
+			inverse[j][i] = ((key[(j + 1) % 3][(i + 1) % 3] * key[(j + 2) % 3][(i + 2) % 3]) -
+				(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3])) / determinant;
 		}
 
 	}
