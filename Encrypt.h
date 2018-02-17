@@ -1,4 +1,5 @@
-void CreateFile() {
+void CreateFile() 
+{
 	cout << "Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
 	name = name + ".txt";
@@ -7,24 +8,22 @@ void CreateFile() {
 	cout << "Done! :)" << endl;
 }
 
-
-void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) {
-
+void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) 
+{
 	cypherFile.open(name);
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
+	for (int i = 0; i < 3; i++) 
+	{
+		for (int j = 0; j < 3; j++) 
 			cypherFile << key[j][i] << " ";
-		}
 	}
 	cypherFile << endl << message2.size() << endl;
-	for (int i = 0; i < (message2.size() / 3); i++) {
-		for (int j = 0; j < 3; j++) {
+	for (int i = 0; i < (message2.size() / 3); i++) 
+	{
+		for (int j = 0; j < 3; j++) 
 			cypherFile << encrypted[i][j] << " ";
-		}
 	}
 	cypherFile.close();
 }
-
 
 vector <int> GetMessage() 
 {
@@ -41,10 +40,8 @@ vector <int> GetMessage()
 	return message2;
 }
 
-
 vector<vector<int>> MatrixKey()
 {
-
 	srand(time(NULL));
 	int determinant = 1;
 	do
@@ -83,7 +80,6 @@ vector<vector<int>> MatrixKey()
 	return key;
 }
 
-
 vector<vector<int>> InverseMatrix()
 {
 	MatrixKey();
@@ -92,18 +88,15 @@ vector<vector<int>> InverseMatrix()
 		determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
 	for (int i = 0; i < 3; i++)
 	{
-
 		for (int j = 0; j < 3; j++)
 		{
 			inverse[j][i] = ((key[(j + 1) % 3][(i + 1) % 3] * key[(j + 2) % 3][(i + 2) % 3]) -
-				(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3])) / determinant;
-			//cout << "Inverse " << j << i << " " << inverse[j][i] << endl;
+							(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3])) / determinant;
+			cout << "Inverse " << j << i << " " << inverse[j][i] << endl;
 		}
-
 	}
 	return inverse;
 }
-
 
 vector<vector<int>> GroupMessage()
 {
@@ -121,16 +114,12 @@ vector<vector<int>> GroupMessage()
 		extra = 1;
 		break;
 	}
-	for (; extra > 0; --extra)
-	{
+	for (extra = extra; extra > 0; --extra)
 		message2.push_back(0);
-	}
 	for (int i = 0; i < message2.size() / 3; i++)
 	{
 		for (int j = 0; j < 3; j++, k++)
-		{
 			grouped[i][j] = message2[k];
-		}
 	}
 	return grouped;
 }
