@@ -60,6 +60,7 @@ vector<vector<int>> MatrixKey()
 		key[2][2] = 2 * n - 1;
 		for (int i = 0; i < 3; i++)
 			determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
+		cout << determinant << endl;
 	} while (determinant == 0);
 	return key;
 }
