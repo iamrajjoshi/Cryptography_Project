@@ -26,7 +26,8 @@ void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) {
 }
 
 
-vector <int> GetMessage() {
+vector <int> GetMessage() 
+{
 	cout << "Please enter your message: ";
 	string message;
 	int a;
@@ -49,7 +50,7 @@ vector<vector<int>> MatrixKey()
 	do
 	{
 		int n = 1 + rand() % 100;
-		key[0][0] = 8 * n * n + 8 * n;
+		key[0][0] = 8 * n * n + 8* n;
 		key[0][1] = 2 * n + 1;
 		key[0][2] = 4 * n;
 		key[1][0] = 4 * n*n + 4 * n;
@@ -60,8 +61,25 @@ vector<vector<int>> MatrixKey()
 		key[2][2] = 2 * n - 1;
 		for (int i = 0; i < 3; i++)
 			determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
-		cout << determinant << endl;
+		//cout << determinant << endl;
 	} while (determinant == 0);
+	/*while (determinant == 0)
+	{
+
+		for (int i = 0; i <= 2; i++)
+		{
+			for (int k = 0; k <= 2; k++)
+			{
+				key[i][k] = 500 + rand() % 1000;
+				cout << "key " << i << k << " " << key[i][k] << endl;
+
+			}
+		}
+		for (int i = 0; i < 3; i++)
+		{
+			determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
+		}
+	}*/
 	return key;
 }
 
@@ -79,6 +97,7 @@ vector<vector<int>> InverseMatrix()
 		{
 			inverse[j][i] = ((key[(j + 1) % 3][(i + 1) % 3] * key[(j + 2) % 3][(i + 2) % 3]) -
 				(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3])) / determinant;
+			//cout << "Inverse " << j << i << " " << inverse[j][i] << endl;
 		}
 
 	}
