@@ -92,7 +92,7 @@ vector<vector<int>> InverseMatrix()
 		{
 			inverse[j][i] = ((key[(j + 1) % 3][(i + 1) % 3] * key[(j + 2) % 3][(i + 2) % 3]) -
 							(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3])) / determinant;
-			cout << "Inverse " << j << i << " " << inverse[j][i] << endl;
+			//cout << "Inverse " << j << i << " " << inverse[j][i] << endl;
 		}
 	}
 	return inverse;
