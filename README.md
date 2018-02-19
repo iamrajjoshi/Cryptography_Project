@@ -1,8 +1,8 @@
-## Cryptography-Project ##
-
-*C++ Project to encrypt test files using a 3 x 3 matrix key (Based on the Hill Cipher)*
+# Cryptography-Project #
+-------------------
+#### C++ Project to encrypt test files using a 3 x 3 matrix key (Based on the Hill Cipher) ####
 ----
-#### Collaborators #### 
+## Collaborators ##
 * Raj Joshi
 * Andrew Silvestri
 * Garret Seo
