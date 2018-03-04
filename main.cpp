@@ -17,6 +17,8 @@
 
 using namespace std;
 
+
+
 #include "FunctionNames.h"
 #include "MatrixMultiplication.h"
 #include "Encrypt.h"
@@ -29,12 +31,12 @@ int main()
 		cout << "Encode or Decode or Quit (Type the command): ";
 		cin >> entry;
 		transform(entry.begin(), entry.end(), entry.begin(), toupper);
-		if (entry == "QUIT") 
+		if (entry == "QUIT")
 		{
 			cout << "Bye!" << endl;
 			break;
 		}
-		else if (entry == "ENCODE") 
+		else if (entry == "ENCODE")
 		{
 			//encode
 			entry2 = 1;
@@ -47,7 +49,7 @@ int main()
 			WriteToFile(inverse, product);
 			system("pause");
 		}
-		else if (entry == "DECODE") 
+		else if (entry == "DECODE")
 		{
 			//decode
 			entry2 = 0;
@@ -56,7 +58,7 @@ int main()
 			DisplayMessage();
 			system("pause");
 		}
-		else 
+		else
 		{
 			cout << "Please enter a valid entry." << endl;
 			system("pause");
