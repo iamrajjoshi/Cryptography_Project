@@ -17,8 +17,7 @@
 
 using namespace std;
 
-
-
+//Showing garret the stuff
 #include "FunctionNames.h"
 #include "MatrixMultiplication.h"
 #include "Encrypt.h"
