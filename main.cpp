@@ -14,7 +14,7 @@
 #include<stdlib.h>
 #include <fstream>
 #include <algorithm>
-
+//raj is so gay like wth hes so ugly
 using namespace std;
 
 
