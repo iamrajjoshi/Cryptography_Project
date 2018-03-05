@@ -31,12 +31,12 @@ int main()
 		cout << "Encode or Decode or Quit (Type the command): ";
 		cin >> entry;
 		transform(entry.begin(), entry.end(), entry.begin(), toupper);
-		if (entry == "QUIT")
+		if (entry == "QUIT" || entry ==  "q" || entry ==  "Q")
 		{
 			cout << "Bye!" << endl;
 			break;
 		}
-		else if (entry == "ENCODE")
+		else if (entry == "ENCODE" || entry ==  "E" || entry ==  "e")
 		{
 			//encode
 			entry2 = 1;
@@ -49,7 +49,7 @@ int main()
 			WriteToFile(inverse, product);
 			system("pause");
 		}
-		else if (entry == "DECODE")
+		else if (entry == "DECODE" || entry ==  "D" || entry ==  "d")
 		{
 			//decode
 			entry2 = 0;
