@@ -26,7 +26,7 @@ using namespace std;
 
 int main()
 {
-	while (1)
+	while (true)
 	{
 		cout << "Encode or Decode or Quit (Type the command): ";
 		cin >> entry;

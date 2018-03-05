@@ -1,4 +1,5 @@
-vector<vector<int>> MatrixMulti(vector<vector<int>> matrix1, vector<vector<int>> matrix2) {
+vector<vector<int>> MatrixMulti(vector<vector<int>> matrix1, vector<vector<int>> matrix2)
+{
 	int size;
 	if (entry2)
 	{
