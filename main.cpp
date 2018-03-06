@@ -14,7 +14,7 @@
 #include<stdlib.h>
 #include <fstream>
 #include <algorithm>
-//raj is so gay like wth hes so ugly
+
 using namespace std;
 
 #include "FunctionNames.h"
@@ -31,12 +31,12 @@ int main()
 		transform(entry.begin(), entry.end(), entry.begin(), toupper);
 
 
-		if (entry == "QUIT" || entry ==  "q" || entry ==  "Q")
+		if (entry == "QUIT" || entry ==  "q" || entry ==  "Q" || entry == "quit")
 		{
 			cout << "Bye!" << endl;
 			break;
 		}
-		else if (entry == "ENCODE" || entry ==  "E" || entry ==  "e")
+		else if (entry == "ENCODE" || entry ==  "E" || entry ==  "e" || entry == "encode")
 		{
 			//encode
 			entry2 = 1;
@@ -49,7 +49,7 @@ int main()
 			WriteToFile(inverse, product);
 			system("pause");
 		}
-		else if (entry == "DECODE" || entry ==  "D" || entry ==  "d")
+		else if (entry == "DECODE" || entry ==  "D" || entry ==  "d" || entry == "decode")
 		{
 			//decode
 			entry2 = 0;
