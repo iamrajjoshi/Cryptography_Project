@@ -14,10 +14,9 @@
 #include<stdlib.h>
 #include <fstream>
 #include <algorithm>
-//raj is so gay like wth hes so ugly
+
 using namespace std;
 
-//Showing garret the stuff
 #include "FunctionNames.h"
 #include "MatrixMultiplication.h"
 #include "Encrypt.h"
@@ -30,6 +29,8 @@ int main()
 		cout << "Encode or Decode or Quit (Type the command): ";
 		cin >> entry;
 		transform(entry.begin(), entry.end(), entry.begin(), toupper);
+
+
 		if (entry == "QUIT" || entry ==  "q" || entry ==  "Q")
 		{
 			cout << "Bye!" << endl;
