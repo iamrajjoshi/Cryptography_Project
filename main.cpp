@@ -21,14 +21,16 @@ using namespace std;
 #include "MatrixMultiplication.h"
 #include "Encrypt.h"
 #include "Decrypt.h"
+#include "UI.h"
 
 int main()
 {
+	EncryptionUI();
 	while (true)
 	{
 		cout << "Encode or Decode or Quit (Type the command): ";
 		cin >> entry;
-		transform(entry.begin(), entry.end(), entry.begin(), toupper);
+		//transform(entry.begin(), entry.end(), entry.begin(), toupper);
 
 
 		if (entry == "QUIT" || entry ==  "q" || entry ==  "Q" || entry == "quit")

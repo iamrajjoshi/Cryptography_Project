@@ -43,9 +43,7 @@ vector <int> GetMessage()
 vector<vector<int>> MatrixKey()
 {
 	srand(time(NULL));
-	int determinant = 1;
-	do
-	{
+	int determinant = 0;
 		int n = 1 + rand() % 100;
 		key[0][0] = 8 * n * n + 8* n;
 		key[0][1] = 2 * n + 1;
@@ -56,27 +54,9 @@ vector<vector<int>> MatrixKey()
 		key[2][0] = 4 * n*n + 4 * n + 1;
 		key[2][1] = n;
 		key[2][2] = 2 * n - 1;
-		for (int i = 0; i < 3; i++)
-			determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
-		//cout << determinant << endl;
-	} while (determinant == 0);
-	/*while (determinant == 0)
-	{
-
-		for (int i = 0; i <= 2; i++)
-		{
-			for (int k = 0; k <= 2; k++)
-			{
-				key[i][k] = 500 + rand() % 1000;
-				cout << "key " << i << k << " " << key[i][k] << endl;
-
-			}
-		}
-		for (int i = 0; i < 3; i++)
-		{
-			determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
-		}
-	}*/
+		/*for (int i = 0; i < 3; i++)
+			for (int j = 0; j < 3; j++)
+				cout << i << j << " " <<key[j][j] << endl;*/
 	return key;
 }
 
@@ -86,6 +66,7 @@ vector<vector<int>> InverseMatrix()
 	int determinant = 0;
 	for (int i = 0; i < 3; i++)
 		determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
+	//cout << determinant << endl;
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)

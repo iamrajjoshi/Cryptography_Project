@@ -26,6 +26,7 @@
     <ClInclude Include="FunctionNames.h" />
     <ClInclude Include="Decrypt.h" />
     <ClInclude Include="Encrypt.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
