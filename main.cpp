@@ -16,7 +16,6 @@ int main()
 		cin >> entry;
 		//transform(entry.begin(), entry.end(), entry.begin(), toupper);
 
-
 		if (entry == "QUIT" || entry ==  "q" || entry ==  "Q" || entry == "quit")
 		{
 			cout << "Bye!" << endl;
