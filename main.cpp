@@ -14,6 +14,7 @@
 #include<stdlib.h>
 #include <fstream>
 #include <algorithm>
+#include <mmsystem.h>
 
 using namespace std;
 
@@ -25,6 +26,7 @@ using namespace std;
 
 int main()
 {
+	PlaySound(TEXT("M_I_T.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC);
 	EncryptionUI();
 	while (true)
 	{
