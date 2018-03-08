@@ -16,12 +16,13 @@
 #include <algorithm>
 #include <mmsystem.h>
 
+using namespace std;
+
 #include "FunctionNames.h"
 #include "MatrixMultiplication.h"
 #include "Encrypt.h"
 #include "Decrypt.h"
 #include "UI.h"
-using namespace std;
 
 int main()
 {
