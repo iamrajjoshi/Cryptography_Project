@@ -1,1 +1,7 @@
-﻿  Cryptography-Project.vcxproj -> C:\Users\geeky\OneDrive\Workspace\Visual Studio 2017\C++\Cryptography-Project\Debug\Cryptography-Project.exe
+﻿  main.cpp
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(20): warning C4018: '<': signed/unsigned mismatch
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(35): warning C4018: '<': signed/unsigned mismatch
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(45): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(100): warning C4018: '<': signed/unsigned mismatch
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(429): warning C4101: 'enter': unreferenced local variable
+  Cryptography-Project.vcxproj -> C:\Users\geeky\OneDrive\Workspace\Visual Studio 2017\C++\Cryptography-Project\Debug\Cryptography-Project.exe

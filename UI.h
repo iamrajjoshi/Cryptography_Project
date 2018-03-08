@@ -46,6 +46,9 @@ void AnimateRocketShip()// Displays rocket
 	cout << "\t\t\t\t\t\t\t\t\t\t\t*****************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t*****************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
 	SetConsoleTextAttribute(hConsole, 15);
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 
@@ -124,7 +127,7 @@ void AnimateRocketShip()// Displays rocket
 
 }
 
-void PHD()																		//Displays letters PHD vertically
+void Acronym()																		//Displays Acronym of Company
 {
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -132,7 +135,7 @@ void PHD()																		//Displays letters PHD vertically
 	FlushConsoleInputBuffer(hConsole);
 	SetConsoleTextAttribute(hConsole, col);
 
-	for (int k = 0; k < 3; k++)				//Displays PHD
+	for (int k = 0; k < 3; k++)				//Displays acronym
 	{
 		for (int i = 0; i < 15; i++)
 		{
@@ -166,7 +169,7 @@ void PHD()																		//Displays letters PHD vertically
 	SetConsoleTextAttribute(hConsole, 15);
 }
 
-void PrettyHelpfulDevelopers()													//Pretty Helpful Developers
+void CompanyName()													//Company Name
 {
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 	system("cls");
@@ -457,24 +460,17 @@ void Intro()//Displays Intro and User Prompt
 
 	Sleep(7000);
 	system("CLS");
+	system("COLOR 0A");
 
 }
 
 void EncryptionUI()	//Entire UI
 {
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
-
 	AnimateRocketShip();
-
-
-
-	PHD();
-
-	PrettyHelpfulDevelopers();
-
+	Acronym();
+	CompanyName();
 	Presents();
-
 	TheCodeMachine();
-
 	Intro();
 }
