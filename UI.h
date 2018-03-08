@@ -1,8 +1,5 @@
 #pragma once
 
-#define STARS 100
-
-
 void AnimateRocketShip()// Displays rocket
 {
 	int i = 0;
