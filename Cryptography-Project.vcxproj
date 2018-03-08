@@ -22,7 +22,6 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
     <ClInclude Include="MatrixMultiplication.h" />
     <ClInclude Include="FunctionNames.h" />
     <ClInclude Include="Decrypt.h" />

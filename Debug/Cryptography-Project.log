@@ -1,7 +1,143 @@
 ﻿  main.cpp
-c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(20): warning C4018: '<': signed/unsigned mismatch
-c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(35): warning C4018: '<': signed/unsigned mismatch
-c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(45): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(100): warning C4018: '<': signed/unsigned mismatch
-c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(429): warning C4101: 'enter': unreferenced local variable
-  Cryptography-Project.vcxproj -> C:\Users\geeky\OneDrive\Workspace\Visual Studio 2017\C++\Cryptography-Project\Debug\Cryptography-Project.exe
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(4): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(4): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(4): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(7): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(7): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(8): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(8): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(11): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(11): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(12): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(12): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(15): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(15): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(16): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(16): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(20): error C2146: syntax error: missing ';' before identifier 'cypherFile'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(21): error C2146: syntax error: missing ';' before identifier 'name'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(24): error C2062: type 'int' unexpected
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(31): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(31): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(33): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(33): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(43): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(43): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(44): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(44): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(44): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(47): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(47): error C2086: 'int string': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(21): note: see declaration of 'string'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(47): error C2146: syntax error: missing ';' before identifier 'entry'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\matrixmultiplication.h(1): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\matrixmultiplication.h(1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\matrixmultiplication.h(1): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\matrixmultiplication.h(2): error C2143: syntax error: missing ';' before '{'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\matrixmultiplication.h(2): error C2447: '{': missing function header (old-style formal list?)
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(3): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(4): error C2065: 'cin': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(4): error C2065: 'name': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(5): error C2065: 'name': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(6): error C2065: 'cypherFile': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(6): error C2228: left of '.open' must have class/struct/union
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(6): note: type is 'unknown-type'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(6): error C2065: 'name': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(7): error C2065: 'cypherFile': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(7): error C2228: left of '.close' must have class/struct/union
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(7): note: type is 'unknown-type'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(8): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(8): error C2065: 'endl': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(11): error C2062: type 'int' unexpected
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(12): error C2143: syntax error: missing ';' before '{'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(12): error C2447: '{': missing function header (old-style formal list?)
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(28): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(28): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(28): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(29): error C2143: syntax error: missing ';' before '{'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(29): error C2447: '{': missing function header (old-style formal list?)
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(43): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(43): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(44): error C2143: syntax error: missing ';' before '{'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(44): error C2447: '{': missing function header (old-style formal list?)
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(63): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(63): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(63): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(64): error C2143: syntax error: missing ';' before '{'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(64): error C2447: '{': missing function header (old-style formal list?)
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(82): error C2143: syntax error: missing ';' before '<'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(82): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(82): error C2086: 'int vector': redefinition
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\functionnames.h(3): note: see declaration of 'vector'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(83): error C2143: syntax error: missing ';' before '{'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\encrypt.h(83): error C2447: '{': missing function header (old-style formal list?)
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(3): error C2146: syntax error: missing ';' before identifier 'Mname'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(3): error C2065: 'Mname': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(4): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(5): error C2065: 'cin': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(5): error C2065: 'Mname': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(6): error C2065: 'ifstream': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(6): error C2146: syntax error: missing ';' before identifier 'inputFile'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(6): error C2065: 'inputFile': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(7): error C2065: 'inputFile': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(7): error C2228: left of '.open' must have class/struct/union
+  c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(7): note: type is 'unknown-type'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(7): error C2065: 'Mname': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(12): error C2065: 'inputFile': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(12): error C2065: 'Minverse': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(15): error C2065: 'inputFile': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(20): error C2065: 'inputFile': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(20): error C2065: 'Mmessage': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(27): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(32): error C2065: 'product': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(35): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(38): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\decrypt.h(38): error C2065: 'endl': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(10): error C2065: 'HANDLE': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(10): error C2146: syntax error: missing ';' before identifier 'hConsole'
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(10): error C2065: 'hConsole': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(11): error C2065: 'hConsole': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(11): error C2065: 'STD_OUTPUT_HANDLE': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(11): error C3861: 'GetStdHandle': identifier not found
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(13): error C2065: 'hConsole': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(13): error C3861: 'FlushConsoleInputBuffer': identifier not found
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(14): error C2065: 'hConsole': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(14): error C3861: 'SetConsoleTextAttribute': identifier not found
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(19): error C3861: 'system': identifier not found
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(23): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(23): error C2065: 'endl': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(26): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(26): error C2065: 'endl': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(27): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(27): error C2065: 'endl': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(28): error C2065: 'cout': undeclared identifier
+c:\users\geeky\onedrive\workspace\visual studio 2017\c++\cryptography-project\ui.h(28): fatal error C1003: error count exceeds 100; stopping compilation
