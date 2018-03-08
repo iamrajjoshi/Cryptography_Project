@@ -365,7 +365,6 @@ void Intro()//Displays Intro and User Prompt
 	int col = 15;
 	FlushConsoleInputBuffer(hConsole);
 	SetConsoleTextAttribute(hConsole, 2);
-	char enter;
 	cout << endl;
 	for (int i = 0; i < 5; i++)
 	{

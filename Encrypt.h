@@ -17,7 +17,7 @@ void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted)
 			cypherFile << key[j][i] << " ";
 	}
 	cypherFile << endl << message2.size() << endl;
-	for (int i = 0; i < (message2.size() / 3); i++) 
+	for (unsigned int i = 0; i < (message2.size() / 3); i++) 
 	{
 		for (int j = 0; j < 3; j++) 
 			cypherFile << encrypted[i][j] << " ";
@@ -32,7 +32,7 @@ vector <int> GetMessage()
 	int a;
 	cin.ignore();
 	getline(cin, message);
-	for (int i = 0; i < message.size(); ++i)
+	for (unsigned int i = 0; i < message.size(); ++i)
 	{
 		a = message[i];
 		message2.push_back(a);
@@ -42,7 +42,7 @@ vector <int> GetMessage()
 
 vector<vector<int>> MatrixKey()
 {
-	srand(time(NULL));
+	srand(static_cast <unsigned int>(time(0))); // Got an error so I fixed it.
 	int determinant = 0;
 		int n = 1 + rand() % 100;
 		key[0][0] = 8 * n * n + 8* n;
@@ -97,7 +97,7 @@ vector<vector<int>> GroupMessage()
 	}
 	for (extra = extra; extra > 0; --extra)
 		message2.push_back(0);
-	for (int i = 0; i < message2.size() / 3; i++)
+	for (unsigned int i = 0; i < message2.size() / 3; i++)
 	{
 		for (int j = 0; j < 3; j++, k++)
 			grouped[i][j] = message2[k];
