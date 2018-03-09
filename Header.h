@@ -14,7 +14,6 @@
 #include <chrono> 
 #include<stdlib.h>
 #include <fstream>
-#include <algorithm>
 #include <mmsystem.h>
 
 using namespace std;
