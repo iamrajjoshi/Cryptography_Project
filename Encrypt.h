@@ -2,7 +2,11 @@ void CreateFile()
 {
 	cout << "Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
-	name = name + ".txt";
+	if (!fs::exists("Encrypted_Files")) { // Check if src folder exists
+		fs::create_directory("Encrypted_Files"); // create src folder
+		
+	}
+	name = "Encrypted_Files//"+ name + ".txt";
 	cypherFile.open(name);
 	cypherFile.close();
 	cout << "Done! :)" << endl;

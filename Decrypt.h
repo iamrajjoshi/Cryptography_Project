@@ -4,7 +4,7 @@ void ReadMessage()
 	cout << "What is the name of the file? ";
 	cin >> Mname;
 	ifstream inputFile;
-	inputFile.open(Mname + ".txt");
+	inputFile.open("Encrypted_Files//" + Mname + ".txt");
 	for (int i = 0; i < 3; i++) 
 	{
 		for (int j = 0; j < 3; j++) 
