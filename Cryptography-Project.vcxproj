@@ -19,18 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClInclude Include="Source Code\Header Files\Decrypt.h" />
+    <ClInclude Include="Source Code\Header Files\Encrypt.h" />
+    <ClInclude Include="Source Code\Header Files\FunctionNames.h" />
+    <ClInclude Include="Source Code\Header Files\Header.h" />
+    <ClInclude Include="Source Code\Header Files\MatrixMultiplication.h" />
+    <ClInclude Include="Source Code\Header Files\UI.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
-    <ClInclude Include="MatrixMultiplication.h" />
-    <ClInclude Include="FunctionNames.h" />
-    <ClInclude Include="Decrypt.h" />
-    <ClInclude Include="Encrypt.h" />
-    <ClInclude Include="UI.h" />
+    <ClCompile Include="Source Code\Source Files\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Debug\Mission_Impossible.wav" />
+    <Media Include="Additional Dependencies\Music\Mission_Impossible.wav" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
