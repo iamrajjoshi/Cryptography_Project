@@ -6,9 +6,8 @@ void AnimateRocketShip()// Displays rocket
 
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	int col = 12;
 	FlushConsoleInputBuffer(hConsole);
-	SetConsoleTextAttribute(hConsole, col);
+	SetConsoleTextAttribute(hConsole, 12);
 	system("cls");
 
 	for (int j = 30; j >= i; j--)
@@ -20,7 +19,7 @@ void AnimateRocketShip()// Displays rocket
 	cout << "\t\t\t\t\t\t\t\t\t\t\t     *******" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t    *********" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t   ***********" << endl;
-	SetConsoleTextAttribute(hConsole, 15);
+	SetConsoleTextAttribute(hConsole, 15);//white
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
@@ -38,11 +37,11 @@ void AnimateRocketShip()// Displays rocket
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t*****************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t*****************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t*****************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t*****************" << endl;
-	SetConsoleTextAttribute(hConsole, 9);
+	SetConsoleTextAttribute(hConsole, 9);//blue
+	cout << "\t\t\t\t\t\t\t\t\t\t       *******************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t       *******************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t       *******************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t       *******************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
