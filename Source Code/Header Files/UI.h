@@ -3,7 +3,6 @@
 void AnimateRocketShip()// Displays rocket
 {
 	int i = 0;
-
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	FlushConsoleInputBuffer(hConsole);
@@ -53,9 +52,8 @@ void AnimateRocketShip()// Displays rocket
 	{
 		HANDLE  hConsole;
 		hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-		int col = 14;
 		FlushConsoleInputBuffer(hConsole);
-		SetConsoleTextAttribute(hConsole, col);
+		SetConsoleTextAttribute(hConsole, 14);//gold
 		for (int i = 0; i < 3; i++)
 		{
 			cout << "\t\t\t\t\t\t\t\t\t\t* * * * * * * * * * * * * * * * *" << endl;
@@ -104,7 +102,6 @@ void AnimateRocketShip()// Displays rocket
 			Sleep(200);
 		}
 		cout << endl << endl << endl << endl << endl;
-		SetConsoleTextAttribute(hConsole, 15);
 	}
 }
 
@@ -112,9 +109,7 @@ void Acronym()																		//Displays Acronym of Company
 {
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	int col = 9;
 	FlushConsoleInputBuffer(hConsole);
-	SetConsoleTextAttribute(hConsole, col);
 
 	for (int k = 0; k < 3; k++)				//Displays acronym
 	{
@@ -130,17 +125,17 @@ void Acronym()																		//Displays Acronym of Company
 
 		if (k == 0)
 		{
-			SetConsoleTextAttribute(hConsole, 12);
+			SetConsoleTextAttribute(hConsole, 12);//red
 			cout << "G" << endl;
 		}
 		else if (k == 1)
 		{
-			SetConsoleTextAttribute(hConsole, 15);
+			SetConsoleTextAttribute(hConsole, 15);//white
 			cout << "O" << endl;
 		}
 		else
 		{
-			SetConsoleTextAttribute(hConsole, 9);
+			SetConsoleTextAttribute(hConsole, 9);//blue
 			cout << "P" << endl;
 		}
 		Sleep(200);
@@ -150,7 +145,6 @@ void Acronym()																		//Displays Acronym of Company
 		cout << endl;
 		Sleep(100);
 	}
-	SetConsoleTextAttribute(hConsole, 15);
 }
 
 void CompanyName()													//Company Name
@@ -175,56 +169,37 @@ void CompanyName()													//Company Name
 		{
 			HANDLE  hConsole;
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-			int col = 12;
 			FlushConsoleInputBuffer(hConsole);
-			SetConsoleTextAttribute(hConsole, col);
+			SetConsoleTextAttribute(hConsole, 12);//red
 			cout << "G ";
 			Sleep(150);
-			SetConsoleTextAttribute(hConsole, 14);
+			SetConsoleTextAttribute(hConsole, 14);//gold
 			cout << "O ";
 			Sleep(150);
 			cout << "D ";
 			Sleep(150);
 			cout << "S ";
-				/*Sleep(150);
-				cout << "t";
-				Sleep(150);
-				cout << "y" << endl;
-				Sleep(150);*/
 		}
 		else if (k == 1)
 		{
 			HANDLE  hConsole;
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-			int col = 15;
 			FlushConsoleInputBuffer(hConsole);
-			SetConsoleTextAttribute(hConsole, col);
+			SetConsoleTextAttribute(hConsole, 15);//white
 			cout << "O ";
 			Sleep(150);
-			SetConsoleTextAttribute(hConsole, 14);
+			SetConsoleTextAttribute(hConsole, 14);//gold
 			cout << "F ";
-			/*Sleep(150);
-			cout << "O";
-			Sleep(150);
-			cout << "A";
-			Sleep(150);
-			cout << "T";
-			Sleep(150);
-			cout << "u";
-			Sleep(150);
-			cout << "l" << endl;
-			Sleep(150);*/
 		}
 		else
 		{
 			HANDLE  hConsole;
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-			int col = 9;
 			FlushConsoleInputBuffer(hConsole);
-			SetConsoleTextAttribute(hConsole, 9);
+			SetConsoleTextAttribute(hConsole, 9);//blue
 			cout << "P ";
 			Sleep(150);
-			SetConsoleTextAttribute(hConsole, 14);
+			SetConsoleTextAttribute(hConsole, 14);//gold
 			cout << "R ";
 			Sleep(150);
 			cout << "O ";
@@ -256,9 +231,8 @@ void Presents()															//Displays "Presents..."
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	int col = 10;
 	FlushConsoleInputBuffer(hConsole);
-	SetConsoleTextAttribute(hConsole, col);
+	SetConsoleTextAttribute(hConsole, 10);//green
 	for (int i = 0; i < 2; i++)
 		cout << endl;
 	for (int j = 0; j < 10; j++)
@@ -290,9 +264,7 @@ void TheCodeMachine()//Displays "THE CODE MACHINE"
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	int col = 10;
 	FlushConsoleInputBuffer(hConsole);
-	SetConsoleTextAttribute(hConsole, col);
 	cout << endl;
 	for (int j = 0; j < 11; j++)
 		cout << "\t";
@@ -302,7 +274,7 @@ void TheCodeMachine()//Displays "THE CODE MACHINE"
 		{
 		case 0:
 		{
-			SetConsoleTextAttribute(hConsole, 12);
+			SetConsoleTextAttribute(hConsole, 12);//red
 			cout << "T";
 			break;
 		}
@@ -323,7 +295,7 @@ void TheCodeMachine()//Displays "THE CODE MACHINE"
 		}
 		case 4:
 		{
-			SetConsoleTextAttribute(hConsole, 15);
+			SetConsoleTextAttribute(hConsole, 15);//white
 			cout << "C";
 			break;
 		}
@@ -349,7 +321,7 @@ void TheCodeMachine()//Displays "THE CODE MACHINE"
 		}
 		case 9:
 		{
-			SetConsoleTextAttribute(hConsole,  9);
+			SetConsoleTextAttribute(hConsole,  9);//blue
 			cout << "M";
 			break;
 		}
@@ -393,7 +365,6 @@ void Intro()//Displays Intro and User Prompt
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	int col = 15;
 	FlushConsoleInputBuffer(hConsole);
 	SetConsoleTextAttribute(hConsole, 14);
 	cout << endl;
