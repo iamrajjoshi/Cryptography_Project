@@ -6,6 +6,9 @@ int main()
 	EncryptionUI();
 	while (true)
 	{
+		cout << "\t\t\t\t\t\t/*----------------------------------------------------------------------------------*\\" << endl;
+		cout << "\t\t\t\t\t\t |\t\t\t\             THE CODE MACHINE\t\t                    |" << endl;
+		cout << "\t\t\t\t\t\t\\*-----------------------------------------------------------------------------------*/" << endl << endl << endl;
 		cout << "Encode or Decode or Quit (Type the command): ";
 		cin >> entry;
 		if (entry == "QUIT" || entry ==  "q" || entry ==  "Q" || entry == "quit")
