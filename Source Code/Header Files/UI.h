@@ -139,7 +139,7 @@ void Acronym()																		//Displays Acronym of Company
 		}
 		Sleep(200);
 	}
-	for (int i = 0; i < 28; i++)
+	for (int i = 0; i < 35; i++)
 	{
 		cout << endl;
 		Sleep(100);
@@ -320,7 +320,7 @@ void TheCodeMachine()//Displays "THE CODE MACHINE"
 		}
 		case 9:
 		{
-			SetConsoleTextAttribute(hConsole,  9);//blue
+			SetConsoleTextAttribute(hConsole, 9);//blue
 			cout << "M";
 			break;
 		}
@@ -375,7 +375,7 @@ void Intro()//Displays Intro and User Prompt
 			cout << "Hello! Welcome to the Code Machine, brought to you by Gods of Programming. " << endl;
 
 		else if (i == 1) {
-			SetConsoleTextAttribute(hConsole, 12); 
+			SetConsoleTextAttribute(hConsole, 12);
 			cout << "Using complicated, secret encryption and decryption methods, this program will take " << endl;
 		}
 		else if (i == 2) {
@@ -387,10 +387,10 @@ void Intro()//Displays Intro and User Prompt
 			cout << "a message that has been sent to you from a user of The Code Machine. We hope you have a " << endl;
 		}
 		else {
-			SetConsoleTextAttribute(hConsole, 14); 
+			SetConsoleTextAttribute(hConsole, 14);
 			cout << "great experience using this program!";
 		}
-			
+
 	}
 	Sleep(7000);
 	system("CLS");

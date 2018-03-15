@@ -16,14 +16,17 @@ int main()
 		SetConsoleTextAttribute(hConsole, 9);
 		cout << "\t\t\t\t\t\t\\*-----------------------------------------------------------------------------------*/" << endl << endl << endl;
 		SetConsoleTextAttribute(hConsole, 10);//green
+
+
+
 		cout << "     Encode or Decode or Quit (Type the command): ";
 		cin >> entry;
-		if (entry == "QUIT" || entry ==  "q" || entry ==  "Q" || entry == "quit")
+		if (entry == "QUIT" || entry == "q" || entry == "Q" || entry == "quit")
 		{
 			cout << "Bye!" << endl;
 			break;
 		}
-		else if (entry == "ENCODE" || entry ==  "E" || entry ==  "e" || entry == "encode")
+		else if (entry == "ENCODE" || entry == "E" || entry == "e" || entry == "encode")
 		{
 			//encode
 			entry2 = 1;
@@ -37,7 +40,7 @@ int main()
 			cout << "     ";
 			system("pause");
 		}
-		else if (entry == "DECODE" || entry ==  "D" || entry ==  "d" || entry == "decode")
+		else if (entry == "DECODE" || entry == "D" || entry == "d" || entry == "decode")
 		{
 			//decode
 			entry2 = 0;
@@ -49,7 +52,7 @@ int main()
 		}
 		else
 		{
-			cout << "     Please enter a valid entry." << endl;
+			cout << "     Please enter a valid entry." << endl << "     ";
 			system("pause");
 		}
 		system("CLS");
