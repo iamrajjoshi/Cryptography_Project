@@ -33,6 +33,7 @@ vector <int> GetMessage()
 {
 	cout << "     Please enter your message: ";
 	string message;
+	message2.clear();
 	int a;
 	cin.ignore();
 	getline(cin, message);
@@ -42,7 +43,7 @@ vector <int> GetMessage()
 		message2.push_back(a);
 	}
 	return message2;
-}
+ }
 
 vector<vector<int>> MatrixKey()
 {
