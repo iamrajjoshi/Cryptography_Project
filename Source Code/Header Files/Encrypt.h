@@ -9,7 +9,7 @@ void CreateFile()
 	name = "Encrypted_Files//"+ name + ".txt";
 	cypherFile.open(name);
 	cypherFile.close();
-	cout << "Done! :)" << endl;
+	cout << "Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder" << endl;
 }
 
 void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) 
