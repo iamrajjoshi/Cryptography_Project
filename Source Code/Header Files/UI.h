@@ -18,8 +18,8 @@ void AnimateRocketShip()// Displays rocket
 	cout << "\t\t\t\t\t\t\t\t\t\t\t     *******" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t    *********" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t   ***********" << endl;
-	SetConsoleTextAttribute(hConsole, 15);//white
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
+	SetConsoleTextAttribute(hConsole, 15);//white
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
@@ -46,7 +46,6 @@ void AnimateRocketShip()// Displays rocket
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
 	SetConsoleTextAttribute(hConsole, 15);
-	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 
 	for (int j = 0; j < 1; j++)
 	{

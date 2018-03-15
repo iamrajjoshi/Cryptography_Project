@@ -1,6 +1,6 @@
 void CreateFile() 
 {
-	cout << "Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
+	cout << "     Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
 	if (!fs::exists("Encrypted_Files")) { // Check if src folder exists
 		fs::create_directory("Encrypted_Files"); // create src folder
@@ -9,7 +9,7 @@ void CreateFile()
 	name = "Encrypted_Files//"+ name + ".txt";
 	cypherFile.open(name);
 	cypherFile.close();
-	cout << "Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder" << endl;
+	cout << "     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder" << endl;
 }
 
 void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) 
@@ -31,7 +31,7 @@ void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted)
 
 vector <int> GetMessage() 
 {
-	cout << "Please enter your message: ";
+	cout << "     Please enter your message: ";
 	string message;
 	int a;
 	cin.ignore();
