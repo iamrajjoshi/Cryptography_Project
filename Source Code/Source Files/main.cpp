@@ -1,8 +1,8 @@
-#include "../Header Files/Header.h"
+#include "../Header Files/Header.h" // all header files are included in Header.h
 
 int main()
 {
-	PlaySound(TEXT("Mission_Impossible.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC);
+	PlaySound(TEXT("Mission_Impossible.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC); // background music
 	EncryptionUI();
 	while (true)
 	{
