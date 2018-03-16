@@ -3,10 +3,10 @@
 int main()
 {
 	PlaySound(TEXT("Mission_Impossible.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC); // background music
-	EncryptionUI();
+	EncryptionUI();		// ui/rocketship
 	while (true)
 	{
-		HANDLE  hConsole;
+		HANDLE  hConsole; //color changing and text
 		hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		FlushConsoleInputBuffer(hConsole);
 		SetConsoleTextAttribute(hConsole, 12);
@@ -20,12 +20,12 @@ int main()
 
 
 		cout << "     Encode or Decode or Quit (Type the command): ";
-		cin >> entry;
+		cin >> entry; // reads the command entered
 		if (entry == "QUIT" || entry == "q" || entry == "Q" || entry == "quit")
 		{
 			cout << "Bye!" << endl;
 			break;
-		}
+		} //for quitting the program
 		else if (entry == "ENCODE" || entry == "E" || entry == "e" || entry == "encode")
 		{
 			//encode
@@ -45,17 +45,17 @@ int main()
 			//decode
 			entry2 = 0;
 			ReadMessage();
-			MatrixMulti(Minverse, Mmessage);
+			MatrixMulti(Minverse, Mmessage); // decrypts w/ matrix multiplication
 			DisplayMessage();
 			cout << "     ";
 			system("pause");
-		}
+		} 
 		else
 		{
-			cout << "     Please enter a valid entry." << endl << "     ";
+			cout << "     Please enter a valid entry." << endl << "     "; // if the user enters something stupid 
 			system("pause");
 		}
-		system("CLS");
+		system("CLS"); 
 	}
 	return 0;
 }
