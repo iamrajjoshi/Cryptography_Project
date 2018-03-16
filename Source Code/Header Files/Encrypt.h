@@ -1,4 +1,4 @@
-void CreateFile() 
+void CreateFile() //a function to create a file
 {
 	cout << "     Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
@@ -12,7 +12,7 @@ void CreateFile()
 	cout << "     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder" << endl;
 }
 
-void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) 
+void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) // a function that copies the encrypted message to the file
 {
 	cypherFile.open(name);
 	for (int i = 0; i < 3; i++) 
