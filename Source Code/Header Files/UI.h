@@ -11,7 +11,7 @@ void AnimateRocketShip()// Displays rocket
 
 	for (int j = 30; j >= i; j--)
 		cout << endl;
-
+	//displays the rocketship through the power of cut & paste
 	cout << "\t\t\t\t\t\t\t\t\t\t\t        *" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t       ***" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t      *****" << endl;
@@ -53,9 +53,9 @@ void AnimateRocketShip()// Displays rocket
 		hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		FlushConsoleInputBuffer(hConsole);
 		SetConsoleTextAttribute(hConsole, 14);//gold
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 3; i++) // displays the "fire" effect
 		{
-			cout << "\t\t\t\t\t\t\t\t\t\t* * * * * * * * * * * * * * * * *" << endl;
+			cout << "\t\t\t\t\t\t\t\t\t\t* * * * * * * * * * * * * * * * *" << endl; 
 			cout << "\t\t\t\t\t\t\t\t\t\t * * * * * * * * * * * * * * * * " << endl;
 			Sleep(200);
 		}
@@ -104,7 +104,7 @@ void AnimateRocketShip()// Displays rocket
 	}
 }
 
-void Acronym()																		//Displays Acronym of Company
+void Acronym()		//Displays Acronym of Company
 {
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -225,7 +225,7 @@ void CompanyName()													//Company Name
 	}
 }
 
-void Presents()															//Displays "Presents..."
+void Presents()		//Displays "Presents..."
 {
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 	HANDLE  hConsole;
@@ -327,7 +327,7 @@ void TheCodeMachine()//Displays "THE CODE MACHINE"
 		case 10:
 		{
 			cout << "A";
-			break;
+			break;\
 		}
 		case 11:
 		{
@@ -359,7 +359,7 @@ void TheCodeMachine()//Displays "THE CODE MACHINE"
 	}
 }
 
-void Intro()//Displays Intro and User Prompt
+void Intro()	//Displays Intro and User Prompt
 {
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 	HANDLE  hConsole;
@@ -397,7 +397,7 @@ void Intro()//Displays Intro and User Prompt
 	system("COLOR 0A");
 }
 
-void EncryptionUI()	//Entire UI
+void EncryptionUI()	//Function that displays all of the UI
 {
 	ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 	AnimateRocketShip();
