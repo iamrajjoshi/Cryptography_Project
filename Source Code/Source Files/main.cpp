@@ -24,12 +24,12 @@ int main()
 		cin >> entry; // reads the command entered
 		if (entry == "QUIT" || entry == "q" || entry == "Q" || entry == "quit")
 		{
-			cout << "Bye!" << endl;
+			cout << "     Bye!" << endl << "     ";
 			break;
 		} //for quitting the program
 		else if (entry == "ENCODE" || entry == "E" || entry == "e" || entry == "encode")
 		{
-			//encode
+			//encodFIN
 			entry2 = 1;
 			//Matrix Key is called in Inverse Matrix
 			InverseMatrix();
