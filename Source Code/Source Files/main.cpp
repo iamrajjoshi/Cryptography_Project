@@ -2,8 +2,8 @@
 
 int main()
 {
-	PlaySound(TEXT("Mission_Impossible.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC); // background music
-	EncryptionUI(); // ui/rocketship
+	//PlaySound(TEXT("Mission_Impossible.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC); // background music
+	//EncryptionUI(); // ui/rocketship
 
 	while (true)
 	{
