@@ -11,11 +11,11 @@ int main()
 		hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		FlushConsoleInputBuffer(hConsole);
 		SetConsoleTextAttribute(hConsole, 12);
-		cout << "\t\t\t\t\t\t/*----------------------------------------------------------------------------------*\\" << endl;
+		cout << "\t\t\t\t\t\t\t\t\t/*----------------------------------------------------------------------------------*\\" << endl;
 		SetConsoleTextAttribute(hConsole, 15);
-		cout << "\t\t\t\t\t\t |\t\t\t\             THE CODE MACHINE\t\t                    |" << endl;
+		cout << "\t\t\t\t\t\t\t\t\t |\t\t\t             THE CODE MACHINE\t\t                    |" << endl;
 		SetConsoleTextAttribute(hConsole, 9);
-		cout << "\t\t\t\t\t\t\\*-----------------------------------------------------------------------------------*/" << endl << endl << endl;
+		cout << "\t\t\t\t\t\t\t\t\t\\*-----------------------------------------------------------------------------------*/" << endl << endl << endl;
 		SetConsoleTextAttribute(hConsole, 10);//green
 
 
