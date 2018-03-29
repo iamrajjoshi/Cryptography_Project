@@ -2,8 +2,8 @@ void CreateFile() //a function to create a file
 {
 	cout << "     Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
-	if (!fs::exists("Encrypted_Files")) { // Check if src folder exists
-		fs::create_directory("Encrypted_Files"); // create src folder
+	if (!fs::exists("Encrypted_Files")) { // Check if source folder exists
+		fs::create_directory("Encrypted_Files"); // create source folder
 		
 	}
 	name = "Encrypted_Files//"+ name + ".txt";
@@ -18,18 +18,18 @@ void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) // a fu
 	for (int i = 0; i < 3; i++) 
 	{
 		for (int j = 0; j < 3; j++) 
-			cypherFile << key[j][i] << " ";
+			cypherFile << key[j][i] << " "; // types in the key
 	}
 	cypherFile << endl << message2.size() << endl;
 	for (unsigned int i = 0; i < (message2.size() / 3); i++) 
 	{
 		for (int j = 0; j < 3; j++) 
-			cypherFile << encrypted[i][j] << " ";
+			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
 	}
 	cypherFile.close();
 }
 
-vector <int> GetMessage() 
+vector <int> GetMessage() // receives the user's message
 {
 	cout << "     Please enter your message: ";
 	string message;
@@ -45,9 +45,9 @@ vector <int> GetMessage()
 	return message2;
  }
 
-vector<vector<int>> MatrixKey()
+vector<vector<int>> MatrixKey() // generates a random key 
 {
-	srand(static_cast <unsigned int>(time(0))); // Got an error so I fixed it.
+	srand(static_cast <unsigned int>(time(0))); 
 	int determinant = 0;
 		int n = 1 + rand() % 100;
 		key[0][0] = 8 * n * n + 8* n;
@@ -59,9 +59,6 @@ vector<vector<int>> MatrixKey()
 		key[2][0] = 4 * n*n + 4 * n + 1;
 		key[2][1] = n;
 		key[2][2] = 2 * n - 1;
-		/*for (int i = 0; i < 3; i++)
-			for (int j = 0; j < 3; j++)
-				cout << i << j << " " <<key[j][j] << endl;*/
 	return key;
 }
 
@@ -71,20 +68,16 @@ vector<vector<int>> InverseMatrix()
 	int determinant = 0;
 	for (int i = 0; i < 3; i++)
 		determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
-	//cout << determinant << endl;
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)
-		{
 			inverse[j][i] = ((key[(j + 1) % 3][(i + 1) % 3] * key[(j + 2) % 3][(i + 2) % 3]) -
 							(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3])) / determinant;
-			//cout << "Inverse " << j << i << " " << inverse[j][i] << endl;
-		}
 	}
 	return inverse;
 }
 
-vector<vector<int>> GroupMessage()
+vector<vector<int>> GroupMessage() // Checks how many characters are left over; groups them back
 {
 	int extra;
 	int k = 0;

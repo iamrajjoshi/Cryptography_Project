@@ -1,4 +1,4 @@
-// Encode:
+// Encode: Raj
 //	Gets Message
 vector <int> GetMessage();
 vector <int> message2;
@@ -25,7 +25,7 @@ void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted);
 
 
 
-// Decode:
+// Decode: Andrew
 //	Reads the Info from the wanted file
 void ReadMessage();
 vector<vector<int>> Minverse(3, vector<int>(3));
@@ -38,7 +38,7 @@ char ascii;
 
 
 
-//Both:
+//Both: Garrett
 //	Does Matrix Multi
 vector<vector<int>> MatrixMulti(vector<vector<int>> matrix1, vector<vector<int>> matrix2);
 vector<vector<int>> product(10000, vector<int>(3));

@@ -1,4 +1,4 @@
-void ReadMessage() 
+void ReadMessage() // reads the users input 
 {
 	string Mname;
 	cout << "     What is the name of the file? ";
@@ -8,17 +8,13 @@ void ReadMessage()
 	for (int i = 0; i < 3; i++) // decrypts the file 
 	{
 		for (int j = 0; j < 3; j++) 
-		{
 			inputFile >> Minverse[i][j]; 
-		}
 	}
 	inputFile >> Msize; // gathers size of matrix
 	for (int i = 0; i < (Msize / 3); i++) 
 	{
 		for (int j = 0; j < 3; j++) 
-		{
 			inputFile >> Mmessage[i][j];
-		}
 	}
 }
 
@@ -30,7 +26,7 @@ void DisplayMessage()
 		for (int j = 0; j < 3; j++) // displays characters one by one
 		{
 			ascii = product[i][j];
-			if (ascii == 0) // breaks at the 'enter' 
+			if (ascii == 0) // breaks at the 'enter' character
 				break;
 			cout << ascii;
 		}

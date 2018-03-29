@@ -4,7 +4,7 @@ void AnimateRocketShip()// Displays rocket
 {
 	int i = 0;
 	HANDLE  hConsole;
-	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //a fancy way to control the output
 	FlushConsoleInputBuffer(hConsole);
 	SetConsoleTextAttribute(hConsole, 12);
 	system("cls");
