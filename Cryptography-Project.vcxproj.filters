@@ -21,9 +21,6 @@
     <ClInclude Include="Source Code\Header Files\Encrypt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source Code\Header Files\FunctionNames.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Source Code\Header Files\Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -31,6 +28,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source Code\Header Files\UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Header Files\Driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source Code\Header Files\FunctionNames.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

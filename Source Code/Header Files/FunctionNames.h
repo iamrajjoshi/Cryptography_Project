@@ -1,3 +1,4 @@
+#pragma once
 // Encode: Raj
 //	Gets Message
 vector <int> GetMessage();

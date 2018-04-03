@@ -1,5 +1,27 @@
 #pragma once
 
+void RunUserInterface()
+{
+	PlaySound(TEXT("Mission_Impossible.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC); // background music
+	EncryptionUI(); // ui/rocketship
+	return;
+}
+
+void DisplayHeader()
+{
+	HANDLE  hConsole; //color changing and text
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	FlushConsoleInputBuffer(hConsole);
+	SetConsoleTextAttribute(hConsole, 12);
+	cout << "\t\t\t\t\t\t\t\t\t/*----------------------------------------------------------------------------------*\\" << endl;
+	SetConsoleTextAttribute(hConsole, 15);
+	cout << "\t\t\t\t\t\t\t\t\t |\t\t\t             THE CODE MACHINE\t\t                    |" << endl;
+	SetConsoleTextAttribute(hConsole, 9);
+	cout << "\t\t\t\t\t\t\t\t\t\\*-----------------------------------------------------------------------------------*/" << endl << endl << endl;
+	SetConsoleTextAttribute(hConsole, 10);//green
+	return;
+}
+
 void AnimateRocketShip()// Displays rocket
 {
 	int i = 0;

@@ -1,3 +1,17 @@
+#pragma once
+
+void RunEncrypt()
+{
+	entry2 = 1;
+	//Matrix Key is called in Inverse Matrix
+	InverseMatrix();
+	GetMessage();
+	GroupMessage();
+	MatrixMulti(key, grouped);
+	CreateFile();
+	WriteToFile(inverse, product);
+	return;
+}
 vector <int> GetMessage() // receives the user's message
 {
 	cout << "     Please enter your message: ";
@@ -30,7 +44,7 @@ vector<vector<int>> GroupMessage() // Checks how many characters are left over; 
 		extra = 1;
 		break;
 	}
-	for (extra = extra; extra > 0; --extra)
+	for (; extra > 0; --extra)
 		message2.push_back(0);
 	for (unsigned int i = 0; i < message2.size() / 3; i++)
 		for (int j = 0; j < 3; j++, k++)
@@ -41,7 +55,6 @@ vector<vector<int>> GroupMessage() // Checks how many characters are left over; 
 vector<vector<int>> MatrixKey() // generates a random key 
 {
 	srand(static_cast <unsigned int>(time(0)));
-	int determinant = 0;
 	int n = 1 + rand() % 100;
 	key[0][0] = 8 * n * n + 8 * n;
 	key[0][1] = 2 * n + 1;
@@ -63,8 +76,8 @@ vector<vector<int>> InverseMatrix()
 		determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
 	for (int i = 0; i < 3; i++)
 		for (int j = 0; j < 3; j++)
-			inverse[j][i] = ((key[(j + 1) % 3][(i + 1) % 3] * key[(j + 2) % 3][(i + 2) % 3]) - 
-			(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3])) 
+			inverse[j][i] = ((key[(j + 1) % 3][(i + 1) % 3] * key[(j + 2) % 3][(i + 2) % 3]) -
+			(key[(j + 1) % 3][(i + 2) % 3] * key[(j + 2) % 3][(i + 1) % 3]))
 			/ determinant;
 	return inverse;
 }
@@ -75,7 +88,7 @@ void CreateFile() //a function to create a file
 	cin >> name;
 	if (!fs::exists("Encrypted_Files"))// Check if source folder exists
 		fs::create_directory("Encrypted_Files"); // create source folder
-	name = "Encrypted_Files//"+ name + ".txt";
+	name = "Encrypted_Files//" + name + ".txt";
 	cypherFile.open(name);
 	cypherFile.close();
 	cout << "     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder" << endl;
@@ -84,12 +97,12 @@ void CreateFile() //a function to create a file
 void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) // a function that copies the encrypted message to the file
 {
 	cypherFile.open(name);
-	for (int i = 0; i < 3; i++) 
-		for (int j = 0; j < 3; j++) 
+	for (int i = 0; i < 3; i++)
+		for (int j = 0; j < 3; j++)
 			cypherFile << key[j][i] << " "; // types in the key
 	cypherFile << endl << message2.size() << endl;
-	for (unsigned int i = 0; i < (message2.size() / 3); i++) 
-		for (int j = 0; j < 3; j++) 
+	for (unsigned int i = 0; i < (message2.size() / 3); i++)
+		for (int j = 0; j < 3; j++)
 			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
 	cypherFile.close();
 }
