@@ -54,38 +54,44 @@ void AnimateRocketShip()// Displays rocket
 	SetConsoleTextAttribute(hConsole, 12);
 	system("cls");
 
-	for (int j = 30; j >= i; j--)
+	for (int j = 50; j >= i; j--)
 		cout << endl;
 	//displays the rocketship through the power of cut & paste
-	cout << "\t\t\t\t\t\t\t\t\t\t\t        *" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t       ***" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t      *****" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t     *******" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t    *********" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t   ***********" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t        +" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t       +++" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t      +++++" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t     +++++++" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t    +++++++++" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t   +++++++++++" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t  +++++++++++++" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t +++++++++++++++" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t+++++++++++++++++" << endl;
 	SetConsoleTextAttribute(hConsole, 15);//white
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t\t  *************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t^^^^^^^^^^^^^^^^^" << endl;
 	SetConsoleTextAttribute(hConsole, 9);//blue
-	cout << "\t\t\t\t\t\t\t\t\t\t       *******************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t       *******************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t       *******************" << endl;
-	cout << "\t\t\t\t\t\t\t\t\t\t       *******************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t     ***********************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t     ***********************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t     ***********************" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t\t     ***********************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
 	cout << "\t\t\t\t\t\t\t\t\t\t*********************************" << endl;
@@ -446,7 +452,7 @@ void Intro()	//Displays Intro and User Prompt
 		}
 
 	}
-	Sleep(10000);
+	Sleep(7000);
 	system("CLS");
 	system("COLOR 0A");
 	return;
