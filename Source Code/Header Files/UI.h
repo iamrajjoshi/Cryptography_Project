@@ -1,14 +1,37 @@
 #pragma once
 
-void RunUserInterface()
+void PromptUser()
 {
-	PlaySound(TEXT("Mission_Impossible.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC); // background music
-	EncryptionUI(); // ui/rocketship
+	cout << "     Encode or Decode or Quit (Type the command): ";
+	cin >> entry;
 	return;
+}
+
+int UserChoice()
+{
+	if (entry == "QUIT" || entry == "q" || entry == "Q" || entry == "quit")
+	{
+		cout << "     Bye!" << endl << "     ";
+		return -1;
+	}
+
+	else if (entry == "ENCODE" || entry == "E" || entry == "e" || entry == "encode")
+		RunEncrypt();
+
+	else if (entry == "DECODE" || entry == "D" || entry == "d" || entry == "decode")
+		RunDecrypt();
+
+	else
+		cout << "     Please enter a valid entry." << endl;
+
+	cout << "     ";
+	system("pause");
+	return 0;
 }
 
 void DisplayHeader()
 {
+	system("CLS");
 	HANDLE  hConsole; //color changing and text
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	FlushConsoleInputBuffer(hConsole);
@@ -77,7 +100,7 @@ void AnimateRocketShip()// Displays rocket
 		SetConsoleTextAttribute(hConsole, 14);//gold
 		for (int i = 0; i < 3; i++) // displays the "fire" effect
 		{
-			cout << "\t\t\t\t\t\t\t\t\t\t* * * * * * * * * * * * * * * * *" << endl; 
+			cout << "\t\t\t\t\t\t\t\t\t\t* * * * * * * * * * * * * * * * *" << endl;
 			cout << "\t\t\t\t\t\t\t\t\t\t * * * * * * * * * * * * * * * * " << endl;
 			Sleep(200);
 		}
@@ -124,6 +147,7 @@ void AnimateRocketShip()// Displays rocket
 		}
 		cout << endl << endl << endl << endl << endl;
 	}
+	return;
 }
 
 void Acronym()		//Displays Acronym of Company
@@ -166,6 +190,7 @@ void Acronym()		//Displays Acronym of Company
 		cout << endl;
 		Sleep(100);
 	}
+	return;
 }
 
 void CompanyName()													//Company Name
@@ -245,6 +270,7 @@ void CompanyName()													//Company Name
 		}
 		Sleep(1000);
 	}
+	return;
 }
 
 void Presents()		//Displays "Presents..."
@@ -278,6 +304,7 @@ void Presents()		//Displays "Presents..."
 			cout << "." << endl;
 		Sleep(150);
 	}
+	return;
 }
 
 void TheCodeMachine()//Displays "THE CODE MACHINE"
@@ -379,6 +406,7 @@ void TheCodeMachine()//Displays "THE CODE MACHINE"
 		}
 		Sleep(150);
 	}
+	return;
 }
 
 void Intro()	//Displays Intro and User Prompt
@@ -396,31 +424,32 @@ void Intro()	//Displays Intro and User Prompt
 		if (i == 0)
 			cout << "Hello! Welcome to the Code Machine, brought to you by Gods of Programming. " << endl;
 
-		else if (i == 1) 
+		else if (i == 1)
 		{
 			SetConsoleTextAttribute(hConsole, 12);
 			cout << "Using complicated, secret encryption and decryption methods, this program will take " << endl;
 		}
-		else if (i == 2) 
+		else if (i == 2)
 		{
 			SetConsoleTextAttribute(hConsole, 15);
 			cout << "in your message and convert it to cipher text stored in a file. The program also decrypts " << endl;
 		}
-		else if (i == 3) 
+		else if (i == 3)
 		{
 			SetConsoleTextAttribute(hConsole, 9);
 			cout << "a message that has been sent to you from a user of The Code Machine. We hope you have a " << endl;
 		}
-		else 
+		else
 		{
 			SetConsoleTextAttribute(hConsole, 14);
 			cout << "great experience using this program!";
 		}
 
 	}
-	Sleep(7000);
+	Sleep(10000);
 	system("CLS");
 	system("COLOR 0A");
+	return;
 }
 
 void EncryptionUI()	//Function that displays all of the UI
@@ -432,4 +461,12 @@ void EncryptionUI()	//Function that displays all of the UI
 	Presents();
 	TheCodeMachine();
 	Intro();
+	return;
+}
+
+void RunUserInterface()
+{
+	PlaySound(TEXT("Avengers.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC); // background music
+	EncryptionUI();
+	return;
 }

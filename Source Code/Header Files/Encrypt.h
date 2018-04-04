@@ -12,6 +12,7 @@ void RunEncrypt()
 	WriteToFile(inverse, product);
 	return;
 }
+
 vector <int> GetMessage() // receives the user's message
 {
 	cout << "     Please enter your message: ";

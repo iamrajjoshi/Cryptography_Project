@@ -9,6 +9,7 @@ void RunDecrypt()
 	DisplayMessage();
 	return;
 }
+
 void ReadMessage() // reads the users input 
 {
 	string Mname;

@@ -7,7 +7,6 @@ vector<vector<int>> MatrixMulti(vector<vector<int>> matrix1, vector<vector<int>>
 		size = Msize;
 	int sum = 0;
 	for (int k = 0; k < (size / 3); k++)
-	{
 		for (int i = 0; i < 3; i++)
 		{
 			for (int j = 0; j < 3; j++)
@@ -15,6 +14,5 @@ vector<vector<int>> MatrixMulti(vector<vector<int>> matrix1, vector<vector<int>>
 			product[k][i] = sum;
 			sum = 0;
 		}
-	}
 	return product;
 }
