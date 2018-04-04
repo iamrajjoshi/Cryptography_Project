@@ -22,7 +22,7 @@ int UserChoice()
 		RunDecrypt();
 
 	else
-		cout << "     Please enter a valid entry." << endl;
+		cout << "     Please enter a valid entry..." << endl;
 
 	cout << "     ";
 	system("pause");
