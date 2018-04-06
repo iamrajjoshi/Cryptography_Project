@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Source Code\Header Files\Decrypt.h" />
     <ClInclude Include="Source Code\Header Files\Driver.h" />
+    <ClInclude Include="Source Code\Header Files\DriverFunctions.h" />
     <ClInclude Include="Source Code\Header Files\Encrypt.h" />
     <ClInclude Include="Source Code\Header Files\FunctionNames.h" />
     <ClInclude Include="Source Code\Header Files\Header.h" />
