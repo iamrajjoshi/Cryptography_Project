@@ -1,8 +1,9 @@
 #pragma once
 
 
-vector <int> GetMessage() // receives the user's message
+vector <int> getMessage() // receives the user's message
 {
+	vector <int> message2;
 	cout << "     Please enter your message: ";
 	string message;
 	message2.clear();
@@ -14,11 +15,6 @@ vector <int> GetMessage() // receives the user's message
 		a = message[i];
 		message2.push_back(a);
 	}
-	return message2;
-}
-
-vector<vector<int>> GroupMessage() // Checks how many characters are left over; groups them back
-{
 	int extra;
 	int k = 0;
 	switch (message2.size() % 3)
@@ -35,6 +31,12 @@ vector<vector<int>> GroupMessage() // Checks how many characters are left over; 
 	}
 	for (; extra > 0; --extra)
 		message2.push_back(0);
+	return message2;
+}
+
+vector<vector<int>> GroupMessage(vector <int> message2) // Checks how many characters are left over; groups them back
+{
+	int k = 0;
 	for (unsigned int i = 0; i < message2.size() / 3; i++)
 		for (int j = 0; j < 3; j++, k++)
 			grouped[i][j] = message2[k];
@@ -43,6 +45,7 @@ vector<vector<int>> GroupMessage() // Checks how many characters are left over; 
 
 vector<vector<int>> MatrixKey() // generates a random key 
 {
+	vector<vector<int>> key(3, vector<int>(3));
 	srand(static_cast <unsigned int>(time(0)));
 	int n = 1 + rand() % 100;
 	key[0][0] = 8 * n * n + 8 * n;
@@ -57,9 +60,9 @@ vector<vector<int>> MatrixKey() // generates a random key
 	return key;
 }
 
-vector<vector<int>> InverseMatrix()
+vector<vector<int>> InverseMatrix(vector<vector<int>> key)
 {
-	MatrixKey();
+	//MatrixKey();
 	int determinant = 0;
 	for (int i = 0; i < 3; i++)
 		determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
@@ -71,8 +74,10 @@ vector<vector<int>> InverseMatrix()
 	return inverse;
 }
 
-void CreateFile() //a function to create a file
+ string createFile() //a function to create a file
 {
+	 ofstream cypherFile;
+	 string name;
 	cout << "     Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
 	if (!fs::exists("Encrypted_Files"))// Check if source folder exists
@@ -81,10 +86,12 @@ void CreateFile() //a function to create a file
 	cypherFile.open(name);
 	cypherFile.close();
 	cout << "     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder..." << endl;
+	return name;
 }
 
-void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) // a function that copies the encrypted message to the file
+void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> message2) // a function that copies the encrypted message to the file
 {
+	ofstream cypherFile;
 	cypherFile.open(name);
 	for (int i = 0; i < 3; i++)
 		for (int j = 0; j < 3; j++)
@@ -98,13 +105,16 @@ void WriteToFile(vector<vector<int>> key, vector<vector<int>> encrypted) // a fu
 
 void RunEncrypt()
 {
-	entry2 = 1;
+	//entry2 = 1;
 	//Matrix Key is called in Inverse Matrix
-	InverseMatrix();
-	GetMessage();
-	GroupMessage();
-	MatrixMulti(key, grouped);
-	CreateFile();
-	WriteToFile(inverse, product);
+	vector <int> message2;
+	vector<vector<int>> key(3, vector<int>(3));
+	key = MatrixKey();
+	InverseMatrix(key);
+	message2 = getMessage();
+	GroupMessage(message2);
+	vector<vector<int>> product(10000, vector<int>(3));
+	product = MatrixMulti(key, grouped, message2);
+	WriteToFile(createFile(), inverse, product, message2);
 	return;
 }

@@ -17,8 +17,9 @@ void ReadMessage() // reads the users input
 			inputFile >> Mmessage[i][j];
 }
 
-void DisplayMessage()
+void DisplayMessage(vector<vector<int>> product)
 {
+	char ascii;
 	cout << "     Your message is: ";
 	for (int i = 0; i < Msize / 3; i++)
 		for (int j = 0; j < 3; j++) // displays characters one by one
@@ -34,9 +35,10 @@ void DisplayMessage()
 void RunDecrypt()
 {
 	//decode
-	entry2 = 0;
+	//entry2 = 0;
 	ReadMessage();
-	MatrixMulti(Minverse, Mmessage);
-	DisplayMessage();
+	vector<vector<int>> product(10000, vector<int>(3));
+	product = MatrixMulti(Minverse, Mmessage);
+	DisplayMessage(product);
 	return;
 }

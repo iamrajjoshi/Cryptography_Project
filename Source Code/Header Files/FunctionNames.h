@@ -1,10 +1,10 @@
 #pragma once
 // Encode: Raj
 //	Gets Message
-vector <int> message2;
+//vector <int> message2;
 
 //	Generates Matrix Key
-vector<vector<int>> key(3, vector<int>(3));
+//vector<vector<int>> key(3, vector<int>(3));
 
 //	Finds the Inverse of the Key
 vector<vector<int>> inverse(3, vector<int>(3));
@@ -13,8 +13,8 @@ vector<vector<int>> inverse(3, vector<int>(3));
 vector<vector<int>> grouped(10000, vector<int>(3));
 
 //	Creates the File
-ofstream cypherFile;
-string name;
+//ofstream cypherFile;
+//string name;
 
 
 // Decode: Andrew
@@ -24,14 +24,14 @@ int Msize;
 vector<vector<int>> Mmessage(10000, vector<int>(3));
 
 //	Displays the message
-char ascii;
+//char ascii;
 
 
 
 //Both: Garrett
 //	Does Matrix Multi
-vector<vector<int>> product(10000, vector<int>(3));
+//<vector<int>> product(10000, vector<int>(3));
 
 //	Used to know if it is Encode, Decode or Quit.
 //string entry;
-int entry2;
+//int entry2;
