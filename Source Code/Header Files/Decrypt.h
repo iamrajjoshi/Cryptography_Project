@@ -1,51 +1,50 @@
 #pragma once
-
+#undef max
 string NameofFile()
 {
-	string Mname;
+	string nameoffile;
 	cout << "     What is the name of the file? ";
-	cin >> Mname;	
-	Mname = ("Encrypted_Files//" + Mname + ".txt");
-
-	return Mname;
+	cin >> nameoffile;	
+	nameoffile = ("Encrypted_Files//" + nameoffile + ".txt");
+	return nameoffile;
 }
-vector<vector<int>> ReadInverseMatrix(string Mname) // reads the users input 
+vector<vector<int>> ReadInverseMatrix(string nameoffile) // reads the users input 
 {
-	vector<vector<int>> Minverse(3, vector<int>(3));
+	vector<vector<int>> inversematrix(3, vector<int>(3));
 	ifstream inputFile;
-	inputFile.open(Mname);
+	inputFile.open(nameoffile);
 	for (int i = 0; i < 3; i++) // decrypts the file 
 		for (int j = 0; j < 3; j++)
-			inputFile >> Minverse[i][j];
-	return Minverse;
+			inputFile >> inversematrix[i][j];
+	return inversematrix;
 }
-int ReadSizeofMessage(string Mname) // reads the users input 
+int ReadSizeofMessage(string nameoffile) // reads the users input 
 {
-	int Msize;
+	int sizeofmessage;
 	ifstream inputFile;
-	inputFile.open(Mname);
-	inputFile.ignore(1000000, '\n');
-	inputFile >> Msize; // gathers size of matrix
-	return Msize;
+	inputFile.open(nameoffile);
+	inputFile.ignore(numeric_limits<streamsize>::max(), '\n');
+	inputFile >> sizeofmessage; // gathers size of matrix
+	return sizeofmessage;
 }
-vector<vector<int>> ReadMessage(string Mname, int Msize) // reads the users input 
+vector<vector<int>> ReadMessage(string nameoffile, int sizeofmessage) // reads the users input 
 {
-	vector<vector<int>> Mmessage(10000, vector<int>(3));
+	vector<vector<int>> encryptedmessage(10000, vector<int>(3));
 	ifstream inputFile;
-	inputFile.open(Mname);
-	inputFile.ignore(1000000, '\n');
-	inputFile.ignore(1000000, '\n');
-	for (int i = 0; i < (Msize / 3); i++)
+	inputFile.open(nameoffile);
+	inputFile.ignore(numeric_limits<streamsize>::max(), '\n');
+	inputFile.ignore(numeric_limits<streamsize>::max(), '\n');
+	for (int i = 0; i < (sizeofmessage / 3); i++)
 		for (int j = 0; j < 3; j++)
-			inputFile >> Mmessage[i][j];
-	return Mmessage;
+			inputFile >> encryptedmessage[i][j];
+	return encryptedmessage;
 }
 
-void DisplayMessage(vector<vector<int>> product, int Msize)
+void DisplayMessage(vector<vector<int>> product, int sizeofmessage)
 {
 	char ascii;
-	cout << "     Your message is: ";
-	for (int i = 0; i < Msize / 3; i++)
+	cout << "     Decrypted Message: ";
+	for (int i = 0; i < sizeofmessage / 3; i++)
 		for (int j = 0; j < 3; j++) // displays characters one by one
 		{
 			ascii = product[i][j];
@@ -58,19 +57,17 @@ void DisplayMessage(vector<vector<int>> product, int Msize)
 
 void RunDecrypt()
 {
-	string Mname = NameofFile();
-	//decode
-	//entry2 = 0;
-	vector<vector<int>> Minverse(3, vector<int>(3));
-	int Msize;
-	vector<vector<int>> Mmessage(10000, vector<int>(3));
+	string nameoffile = NameofFile();
+	vector<vector<int>> inversematrix(3, vector<int>(3));
+	int sizeofmessage;
+	vector<vector<int>> encryptedmessage(100000, vector<int>(3));
+	vector<vector<int>> product(100000, vector<int>(3));
 
-	Minverse = ReadInverseMatrix(Mname);
-	Msize = ReadSizeofMessage(Mname);
-	Mmessage = ReadMessage(Mname, Msize);
+	inversematrix = ReadInverseMatrix(nameoffile);
+	sizeofmessage = ReadSizeofMessage(nameoffile);
+	encryptedmessage = ReadMessage(nameoffile, sizeofmessage);
+	product = MatrixMulti(inversematrix, encryptedmessage, sizeofmessage);
 
-	vector<vector<int>> product(10000, vector<int>(3));
-	product = MatrixMulti(Minverse, Mmessage, Msize);
-	DisplayMessage(product, Msize);
+	DisplayMessage(product, sizeofmessage);
 	return;
 }

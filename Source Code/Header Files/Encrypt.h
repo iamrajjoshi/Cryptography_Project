@@ -1,6 +1,5 @@
 #pragma once
 
-
 vector <int> getMessage() // receives the user's message
 {
 	vector <int> messagevector;
@@ -20,14 +19,20 @@ vector <int> getMessage() // receives the user's message
 	switch (messagevector.size() % 3)
 	{
 	case 0:
+	{
 		extra = 0;
 		break;
+	}
 	case 1:
+	{
 		extra = 2;
 		break;
+	}
 	case 2:
+	{
 		extra = 1;
 		break;
+	}
 	}
 	for (; extra > 0; --extra)
 		messagevector.push_back(0);
@@ -64,7 +69,6 @@ vector<vector<int>> MatrixKey() // generates a random key
 vector<vector<int>> InverseMatrix(vector<vector<int>> key)
 {
 	vector<vector<int>> inverse(3, vector<int>(3));
-	//MatrixKey();
 	int determinant = 0;
 	for (int i = 0; i < 3; i++)
 		determinant = determinant + (key[0][i] * (key[1][(i + 1) % 3] * key[2][(i + 2) % 3] - key[1][(i + 2) % 3] * key[2][(i + 1) % 3]));
@@ -103,19 +107,17 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 		for (int j = 0; j < 3; j++)
 			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
 	cypherFile.close();
+	return;
 }
 
 void RunEncrypt()
 {
-	//entry2 = 1;
-	//Matrix Key is called in Inverse Matrix
 	vector <int> messagevector;
 	vector<vector<int>> key(3, vector<int>(3));
+	vector<vector<int>> product(100000, vector<int>(3));
+
 	key = MatrixKey();
-	
 	messagevector = getMessage();
-	
-	vector<vector<int>> product(10000, vector<int>(3));
 	product = MatrixMulti(key, GroupMessage(messagevector), messagevector);
 	WriteToFile(createFile(), InverseMatrix(key), product, messagevector);
 	return;
