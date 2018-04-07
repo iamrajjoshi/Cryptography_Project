@@ -1,4 +1,6 @@
-vector<vector<int>> MatrixMultiplication(vector<vector<int>> matrix1, vector<vector<int>> matrix2, vector <int> messagevector)//encryption
+#pragma once
+
+vector<vector<int>> MatrixMultiplication (vector<vector<int>> matrix1, vector<vector<int>> matrix2, vector <int> messagevector)//encryption
 {
 	vector<vector<int>> product(10000, vector<int>(3));
 	int sum = 0;

@@ -13,9 +13,9 @@
 using namespace std;
 namespace fs = std::experimental::filesystem;
 
-#include "MatrixMultiplication.h"
 #include "Encrypt.h"
 #include "Decrypt.h"
 #include "UI.h"
+#include "MatrixMultiplication.h"
 #include "DriverFunctions.h"
 #include "Driver.h"
