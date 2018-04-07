@@ -9,7 +9,7 @@ void AnimateRocketShip()// Displays rocket
 	SetConsoleTextAttribute(hConsole, 12);
 	system("cls");
 
-	for (int j = 50; j >= i; j--)
+	for (int j = 5; j >= i; j--)
 		cout << endl;
 	//displays the rocketship through the power of cut & paste
 	cout << "\t\t\t\t\t\t\t\t\t\t\t        +" << endl;

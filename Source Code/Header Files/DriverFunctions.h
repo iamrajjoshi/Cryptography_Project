@@ -15,14 +15,20 @@ void DisplayHeader()
 	FlushConsoleInputBuffer(hConsole);
 	SetConsoleTextAttribute(hConsole, 12);
 	cout << "\t\t\t\t\t\t\t\t\t/*----------------------------------------------------------------------------------*\\" << endl;
+	SetConsoleTextAttribute(hConsole, 14);
+	//cout << "\t\t\t\t\t\t\t\t\t |\t\t\t             \t\t                                     |" << endl;
+	//SetConsoleTextAttribute(hConsole, 14);
+	cout << "\t\t\t\t\t\t\t\t\t |\t\t\t           THE CODE MACHINE\t\t                     |" << endl;
 	SetConsoleTextAttribute(hConsole, 15);
-	cout << "\t\t\t\t\t\t\t\t\t |\t\t\t             THE CODE MACHINE\t\t                    |" << endl;
+	cout << "\t\t\t\t\t\t\t\t\t |\t\t\t                  GOP\t\t                             |" << endl;
+	SetConsoleTextAttribute(hConsole, 14);
+	cout << "\t\t\t\t\t\t\t\t\t |\t\t\t       By: Raj, Garrett, Andrew\t\t                     |" << endl;
 	SetConsoleTextAttribute(hConsole, 9);
 	cout << "\t\t\t\t\t\t\t\t\t\\*-----------------------------------------------------------------------------------*/" << endl << endl << endl;
 	SetConsoleTextAttribute(hConsole, 10);//green
-	
 	return;
 }
+
 string PromptUser()
 {
 	string entry;
@@ -50,5 +56,5 @@ int UserChoice(string entry)
 
 	cout << "     ";
 	system("pause");
-	return 0 ;
+	return 0;
 }

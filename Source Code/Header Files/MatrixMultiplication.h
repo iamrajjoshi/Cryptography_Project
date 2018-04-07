@@ -1,4 +1,4 @@
-vector<vector<int>> MatrixMultiplication(vector<vector<int>> matrix1, vector<vector<int>> matrix2, vector <int> messagevector)
+vector<vector<int>> MatrixMultiplication(vector<vector<int>> matrix1, vector<vector<int>> matrix2, vector <int> messagevector)//encryption
 {
 	vector<vector<int>> product(10000, vector<int>(3));
 	int sum = 0;
@@ -13,7 +13,7 @@ vector<vector<int>> MatrixMultiplication(vector<vector<int>> matrix1, vector<vec
 	return product;
 }
 
-vector<vector<int>> MatrixMultiplication(vector<vector<int>> matrix1, vector<vector<int>> matrix2, int sizeofmessage)
+vector<vector<int>> MatrixMultiplication(vector<vector<int>> matrix1, vector<vector<int>> matrix2, int sizeofmessage)//decryption
 {
 	vector<vector<int>> product(10000, vector<int>(3));
 	int sum = 0;

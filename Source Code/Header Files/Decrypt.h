@@ -1,13 +1,21 @@
 #pragma once
 #undef max
-string NameofFile()
+
+string InputFileName()
 {
 	string nameoffile;
 	cout << "     What is the name of the file? ";
 	cin >> nameoffile;	
 	nameoffile = ("Encrypted_Files//" + nameoffile + ".txt");
+	ifstream inputFile;
+	inputFile.open(nameoffile);
+	if (!inputFile) {
+		cout << "     Can't open input the file " << nameoffile << endl << "     ";
+		exit(1);
+	}
 	return nameoffile;
 }
+
 vector<vector<int>> ReadInverseMatrix(string nameoffile) // reads the users input 
 {
 	vector<vector<int>> inversematrix(3, vector<int>(3));
@@ -18,6 +26,7 @@ vector<vector<int>> ReadInverseMatrix(string nameoffile) // reads the users inpu
 			inputFile >> inversematrix[i][j];
 	return inversematrix;
 }
+
 int ReadSizeofMessage(string nameoffile) // reads the users input 
 {
 	int sizeofmessage;
@@ -27,6 +36,7 @@ int ReadSizeofMessage(string nameoffile) // reads the users input
 	inputFile >> sizeofmessage; // gathers size of matrix
 	return sizeofmessage;
 }
+
 vector<vector<int>> ReadMessage(string nameoffile, int sizeofmessage) // reads the users input 
 {
 	vector<vector<int>> encryptedmessage(10000, vector<int>(3));
@@ -57,11 +67,11 @@ void DisplayMessage(vector<vector<int>> product, int sizeofmessage)
 
 void RunDecrypt()
 {
-	string nameoffile = NameofFile();
+	string nameoffile = InputFileName();
 	vector<vector<int>> inversematrix(3, vector<int>(3));
 	int sizeofmessage;
-	vector<vector<int>> encryptedmessage(100000, vector<int>(3));
-	vector<vector<int>> product(100000, vector<int>(3));
+	vector<vector<int>> encryptedmessage(10000, vector<int>(3));
+	vector<vector<int>> product(10000, vector<int>(3));
 
 	inversematrix = ReadInverseMatrix(nameoffile);
 	sizeofmessage = ReadSizeofMessage(nameoffile);
