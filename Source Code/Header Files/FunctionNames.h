@@ -19,9 +19,9 @@
 
 // Decode: Andrew
 //	Reads the Info from the wanted file
-vector<vector<int>> Minverse(3, vector<int>(3));
-int Msize;
-vector<vector<int>> Mmessage(10000, vector<int>(3));
+//vector<vector<int>> Minverse(3, vector<int>(3));
+//int Msize;
+//vector<vector<int>> Mmessage(10000, vector<int>(3));
 
 //	Displays the message
 //char ascii;

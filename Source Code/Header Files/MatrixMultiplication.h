@@ -14,7 +14,7 @@ vector<vector<int>> MatrixMulti(vector<vector<int>> matrix1, vector<vector<int>>
 	return product;
 }
 
-vector<vector<int>> MatrixMulti(vector<vector<int>> matrix1, vector<vector<int>> matrix2)
+vector<vector<int>> MatrixMulti(vector<vector<int>> matrix1, vector<vector<int>> matrix2, int Msize)
 {
 	vector<vector<int>> product(10000, vector<int>(3));
 	int size;

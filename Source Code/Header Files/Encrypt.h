@@ -3,21 +3,21 @@
 
 vector <int> getMessage() // receives the user's message
 {
-	vector <int> message2;
+	vector <int> messagevector;
 	cout << "     Please enter your message: ";
 	string message;
-	message2.clear();
+	messagevector.clear();
 	int a;
 	cin.ignore();
 	getline(cin, message);
 	for (unsigned int i = 0; i < message.size(); ++i)
 	{
 		a = message[i];
-		message2.push_back(a);
+		messagevector.push_back(a);
 	}
 	int extra;
 	int k = 0;
-	switch (message2.size() % 3)
+	switch (messagevector.size() % 3)
 	{
 	case 0:
 		extra = 0;
@@ -30,17 +30,17 @@ vector <int> getMessage() // receives the user's message
 		break;
 	}
 	for (; extra > 0; --extra)
-		message2.push_back(0);
-	return message2;
+		messagevector.push_back(0);
+	return messagevector;
 }
 
-vector<vector<int>> GroupMessage(vector <int> message2) // Checks how many characters are left over; groups them back
+vector<vector<int>> GroupMessage(vector <int> messagevector) // Checks how many characters are left over; groups them back
 {
 	vector<vector<int>> grouped(10000, vector<int>(3));
 	int k = 0;
-	for (unsigned int i = 0; i < message2.size() / 3; i++)
+	for (unsigned int i = 0; i < messagevector.size() / 3; i++)
 		for (int j = 0; j < 3; j++, k++)
-			grouped[i][j] = message2[k];
+			grouped[i][j] = messagevector[k];
 	return grouped;
 }
 
@@ -91,15 +91,15 @@ vector<vector<int>> InverseMatrix(vector<vector<int>> key)
 	return name;
 }
 
-void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> message2) // a function that copies the encrypted message to the file
+void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> messagevector) // a function that copies the encrypted message to the file
 {
 	ofstream cypherFile;
 	cypherFile.open(name);
 	for (int i = 0; i < 3; i++)
 		for (int j = 0; j < 3; j++)
 			cypherFile << key[j][i] << " "; // types in the key
-	cypherFile << endl << message2.size() << endl;
-	for (unsigned int i = 0; i < (message2.size() / 3); i++)
+	cypherFile << endl << messagevector.size() << endl;
+	for (unsigned int i = 0; i < (messagevector.size() / 3); i++)
 		for (int j = 0; j < 3; j++)
 			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
 	cypherFile.close();
@@ -109,14 +109,14 @@ void RunEncrypt()
 {
 	//entry2 = 1;
 	//Matrix Key is called in Inverse Matrix
-	vector <int> message2;
+	vector <int> messagevector;
 	vector<vector<int>> key(3, vector<int>(3));
 	key = MatrixKey();
 	
-	message2 = getMessage();
+	messagevector = getMessage();
 	
 	vector<vector<int>> product(10000, vector<int>(3));
-	product = MatrixMulti(key, GroupMessage(message2), message2);
-	WriteToFile(createFile(), InverseMatrix(key), product, message2);
+	product = MatrixMulti(key, GroupMessage(messagevector), messagevector);
+	WriteToFile(createFile(), InverseMatrix(key), product, messagevector);
 	return;
 }
