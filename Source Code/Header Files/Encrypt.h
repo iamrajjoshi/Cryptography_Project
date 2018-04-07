@@ -36,6 +36,7 @@ vector <int> getMessage() // receives the user's message
 
 vector<vector<int>> GroupMessage(vector <int> message2) // Checks how many characters are left over; groups them back
 {
+	vector<vector<int>> grouped(10000, vector<int>(3));
 	int k = 0;
 	for (unsigned int i = 0; i < message2.size() / 3; i++)
 		for (int j = 0; j < 3; j++, k++)
@@ -62,6 +63,7 @@ vector<vector<int>> MatrixKey() // generates a random key
 
 vector<vector<int>> InverseMatrix(vector<vector<int>> key)
 {
+	vector<vector<int>> inverse(3, vector<int>(3));
 	//MatrixKey();
 	int determinant = 0;
 	for (int i = 0; i < 3; i++)
@@ -110,11 +112,11 @@ void RunEncrypt()
 	vector <int> message2;
 	vector<vector<int>> key(3, vector<int>(3));
 	key = MatrixKey();
-	InverseMatrix(key);
+	
 	message2 = getMessage();
-	GroupMessage(message2);
+	
 	vector<vector<int>> product(10000, vector<int>(3));
-	product = MatrixMulti(key, grouped, message2);
-	WriteToFile(createFile(), inverse, product, message2);
+	product = MatrixMulti(key, GroupMessage(message2), message2);
+	WriteToFile(createFile(), InverseMatrix(key), product, message2);
 	return;
 }

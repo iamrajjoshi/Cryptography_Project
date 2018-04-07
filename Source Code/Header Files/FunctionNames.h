@@ -7,10 +7,10 @@
 //vector<vector<int>> key(3, vector<int>(3));
 
 //	Finds the Inverse of the Key
-vector<vector<int>> inverse(3, vector<int>(3));
+//vector<vector<int>> inverse(3, vector<int>(3));
 
 //	Groups the Message into x by 3 matrixs
-vector<vector<int>> grouped(10000, vector<int>(3));
+//vector<vector<int>> grouped(10000, vector<int>(3));
 
 //	Creates the File
 //ofstream cypherFile;
