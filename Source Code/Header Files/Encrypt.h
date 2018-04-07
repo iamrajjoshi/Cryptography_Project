@@ -1,7 +1,6 @@
 #pragma once
 
 
-
 vector <int> GetMessage() // receives the user's message
 {
 	cout << "     Please enter your message: ";
