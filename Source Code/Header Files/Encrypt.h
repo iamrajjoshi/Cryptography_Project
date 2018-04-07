@@ -112,13 +112,13 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 
 void RunEncrypt()
 {
-	vector <int> messagevector;
 	vector<vector<int>> key(3, vector<int>(3));
+	vector <int> messagevector;
 	vector<vector<int>> product(100000, vector<int>(3));
 
 	key = MatrixKey();
 	messagevector = getMessage();
-	product = MatrixMulti(key, GroupMessage(messagevector), messagevector);
+	product = MatrixMultiplication(key, GroupMessage(messagevector), messagevector);
 	WriteToFile(createFile(), InverseMatrix(key), product, messagevector);
 	return;
 }

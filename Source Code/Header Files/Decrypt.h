@@ -66,7 +66,7 @@ void RunDecrypt()
 	inversematrix = ReadInverseMatrix(nameoffile);
 	sizeofmessage = ReadSizeofMessage(nameoffile);
 	encryptedmessage = ReadMessage(nameoffile, sizeofmessage);
-	product = MatrixMulti(inversematrix, encryptedmessage, sizeofmessage);
+	product = MatrixMultiplication(inversematrix, encryptedmessage, sizeofmessage);
 
 	DisplayMessage(product, sizeofmessage);
 	return;
