@@ -36,6 +36,9 @@
     <ClInclude Include="Source Code\Header Files\Includes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source Code\Header Files\Error Message.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source Code\Source Files\main.cpp">

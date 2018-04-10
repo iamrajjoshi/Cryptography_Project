@@ -23,6 +23,7 @@
     <ClInclude Include="Source Code\Header Files\Driver.h" />
     <ClInclude Include="Source Code\Header Files\DriverFunctions.h" />
     <ClInclude Include="Source Code\Header Files\Encrypt.h" />
+    <ClInclude Include="Source Code\Header Files\Error Message.h" />
     <ClInclude Include="Source Code\Header Files\Includes.h" />
     <ClInclude Include="Source Code\Header Files\MatrixMultiplication.h" />
     <ClInclude Include="Source Code\Header Files\UI.h" />

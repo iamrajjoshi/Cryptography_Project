@@ -11,7 +11,7 @@ vector <int> getMessage() // receives the user's message
 	getline(cin, message);
 	if (message.size() > 10000) 
 	{
-		cout << "     Message size exceeds requirements" << endl << "     ";
+		cout << "You have went above the character limit!" << endl << "     ";
 		exit(1);
 	}
 	for (unsigned int i = 0; i < message.size(); ++i)
@@ -125,3 +125,5 @@ void RunEncrypt()
 	WriteToFile(OutputFileName(), InverseMatrix(key), product, messagevector);
 	return;
 }
+
+

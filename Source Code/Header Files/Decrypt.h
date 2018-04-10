@@ -1,8 +1,7 @@
 #pragma once
 #undef max
 
-string InputFileName()
-{
+string InputFileName() {
 	string nameoffile;
 	cout << "     What is the name of the file? ";
 	cin >> nameoffile;	
@@ -10,14 +9,14 @@ string InputFileName()
 	ifstream inputFile;
 	inputFile.open(nameoffile);
 	if (!inputFile) {
-		cout << "     Can't open input the file " << nameoffile << endl << "     ";
+		cout << "\t";
+		cout << "The file cannot be open. It does not exist or we don't have permission to open the file!" << endl << "     ";
 		exit(1);
 	}
 	return nameoffile;
 }
 
-vector<vector<int>> ReadInverseMatrix(string nameoffile) // reads the users input 
-{
+vector<vector<int>> ReadInverseMatrix(string nameoffile) { // reads the users input 
 	vector<vector<int>> inversematrix(3, vector<int>(3));
 	ifstream inputFile;
 	inputFile.open(nameoffile);
@@ -27,8 +26,7 @@ vector<vector<int>> ReadInverseMatrix(string nameoffile) // reads the users inpu
 	return inversematrix;
 }
 
-int ReadSizeofMessage(string nameoffile) // reads the users input 
-{
+int ReadSizeofMessage(string nameoffile) { // reads the users input 
 	int sizeofmessage;
 	ifstream inputFile;
 	inputFile.open(nameoffile);
@@ -37,8 +35,7 @@ int ReadSizeofMessage(string nameoffile) // reads the users input
 	return sizeofmessage;
 }
 
-vector<vector<int>> ReadMessage(string nameoffile, int sizeofmessage) // reads the users input 
-{
+vector<vector<int>> ReadMessage(string nameoffile, int sizeofmessage) { // reads the users input
 	vector<vector<int>> encryptedmessage(10000, vector<int>(3));
 	ifstream inputFile;
 	inputFile.open(nameoffile);
@@ -50,8 +47,7 @@ vector<vector<int>> ReadMessage(string nameoffile, int sizeofmessage) // reads t
 	return encryptedmessage;
 }
 
-void DisplayMessage(vector<vector<int>> product, int sizeofmessage)
-{
+void DisplayMessage(vector<vector<int>> product, int sizeofmessage) {
 	char ascii;
 	cout << "     Decrypted Message: ";
 	for (int i = 0; i < sizeofmessage / 3; i++)
