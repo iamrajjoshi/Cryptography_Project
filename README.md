@@ -1,5 +1,4 @@
 # Cryptography-Project #
-### THE CODE MACHINE ###
 -------------------
 #### C++ Project to encrypt test files using a 3 x 3 matrix key (Based on the Hill Cipher) 
 ----
@@ -18,4 +17,4 @@ not supported) a numerical value and multiplying the characters in groups of 3 w
 To fully understand the encryption/decryption method, visit https://www.wikipedia.org/wiki/Hill_cipher
 
 ## Matrix Key Generation
-In order to find a integer matrix of a randomly generated matrix, the determinant must be (-1) or (+1). In order to make the code more efficiant, a unimodular matrix was created since a unimodular matrix will always have a determinant of +-1. For more information, visit http://mathworld.wolfram.com/UnimodularMatrix.html
+In order to find a integer matrix of a randomly generated matrix, the determinant must be (-1) or (+1). Without an integer matrix, the program would not correctlt decrypt the message as it would truncate the decimal part. The solution that was implemented for this program is unimodular matrix. A unimodular matrix solves the issue because it will always have a determinant of (+1) or (-1). For more information, visit http://mathworld.wolfram.com/UnimodularMatrix.html
