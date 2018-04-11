@@ -4,7 +4,7 @@
 string InputFileName() {
 	string nameoffile;
 	cout << "     What is the name of the file? ";
-	cin >> nameoffile;	
+	cin >> nameoffile;
 	nameoffile = ("Encrypted_Files//" + nameoffile + ".txt");
 	ifstream inputFile;
 	inputFile.open(nameoffile);
@@ -49,15 +49,19 @@ vector<vector<int>> ReadMessage(string nameoffile, int sizeofmessage) { // reads
 
 void DisplayMessage(vector<vector<int>> product, int sizeofmessage) {
 	char ascii;
-	cout << "     Decrypted Message: ";
+	string message = " ";
+	Loading("decrypted");
+	cout << "\n\n     Decrypted Message: ";
 	for (int i = 0; i < sizeofmessage / 3; i++)
 		for (int j = 0; j < 3; j++) // displays characters one by one
 		{
-			ascii = product[i][j];
-			if (ascii == 0) // breaks at the 'enter' character
-				break;
-			cout << ascii;
+			if ((ascii = product[i][j]) != 0)
+			{
+				message += ascii;
+			}
 		}
+	message += '\0';
+	slow_print(message, 50);
 	cout << endl;
 }
 
@@ -72,7 +76,7 @@ void RunDecrypt()
 	inversematrix = ReadInverseMatrix(nameoffile);
 	sizeofmessage = ReadSizeofMessage(nameoffile);
 	encryptedmessage = ReadMessage(nameoffile, sizeofmessage);
-	product = MatrixMultiplication (inversematrix, encryptedmessage, sizeofmessage);
+	product = MatrixMultiplication(inversematrix, encryptedmessage, sizeofmessage);
 
 	DisplayMessage(product, sizeofmessage);
 	return;

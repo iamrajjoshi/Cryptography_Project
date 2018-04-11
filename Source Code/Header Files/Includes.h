@@ -9,13 +9,15 @@
 #include <iostream>       
 #include <fstream>
 #include <filesystem>
+#include <dos.h>
+#include <conio.h>
 
 using namespace std;
 namespace fs = std::experimental::filesystem;
 
+#include "UI.h"
 #include "MatrixMultiplication.h"
 #include "Encrypt.h"
 #include "Decrypt.h"
-#include "UI.h"
 #include "DriverFunctions.h"
 #include "Driver.h"

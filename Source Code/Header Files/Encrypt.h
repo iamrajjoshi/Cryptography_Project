@@ -9,9 +9,9 @@ vector <int> getMessage() // receives the user's message
 	int a;
 	cin.ignore();
 	getline(cin, message);
-	if (message.size() > 10000) 
+	if (message.size() > 10000)
 	{
-		cout << "You have went above the character limit!" << endl << "     ";
+		cout << "     You have went above the character limit!" << endl << "     ";
 		exit(1);
 	}
 	for (unsigned int i = 0; i < message.size(); ++i)
@@ -85,12 +85,12 @@ vector<vector<int>> InverseMatrix(vector<vector<int>> key)
 	return inverse;
 }
 
- string OutputFileName()
+string OutputFileName()
 {
-	 string name;
+	string name;
 	cout << "     Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
-	cout << "     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder..." << endl;
+	//cout << "     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder..." << endl;
 	return name;
 }
 
@@ -111,18 +111,44 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 	cypherFile.close();
 	return;
 }
+void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> messagevector, vector<vector<int>> password, vector<int> rawpass) // a function that copies the encrypted message to the file
+{
+	ofstream cypherFile;
+	if (!fs::exists("Encrypted_Files"))// Check if source folder exists
+		fs::create_directory("Encrypted_Files"); // create source folder
+	name = "Encrypted_Files//" + name + ".txt";
+	cypherFile.open(name);
+	cypherFile << rawpass.size() << endl;
+	for (unsigned int i = 0; i < (rawpass.size() / 3); i++)
+		for (int j = 0; j < 3; j++)
+			cypherFile << password[i][j] << " "; // types in the encrypted message
+	cypherFile << endl;
+	for (int i = 0; i < 3; i++)
+		for (int j = 0; j < 3; j++)
+			cypherFile << key[j][i] << " "; // types in the key
+	cypherFile << endl << messagevector.size() << endl;
+	for (unsigned int i = 0; i < (messagevector.size() / 3); i++)
+		for (int j = 0; j < 3; j++)
+			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
+	cypherFile.close();
+	return;
+}
 
 void RunEncrypt()
 {
 	vector<vector<int>> key(3, vector<int>(3));
 	vector <int> messagevector;
 	vector<vector<int>> product(100000, vector<int>(3));
+	vector <int> rawpass;
+	vector <vector<int>> finalpass(100000, vector<int>(3));
 
 	key = MatrixKey();
 	messagevector = getMessage();
 	product = MatrixMultiplication(key, GroupMessage(messagevector), messagevector);
 
 	WriteToFile(OutputFileName(), InverseMatrix(key), product, messagevector);
+	Loading("encrypted");
+	cout << "\n\n\n     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder...\n";
 	return;
 }
 

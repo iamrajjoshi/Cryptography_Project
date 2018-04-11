@@ -1,5 +1,158 @@
 #pragma once
 
+void slow_print(const string& message)
+{
+	// Range loops are "for each" constructs; here: for each character in the string
+	for (const char c : message)
+	{
+		// flush is used to make sure the buffer is emptied to the terminal immediately
+		cout << c << flush;
+		// Ask the thread to sleep for at least n millis.
+		Sleep(30);
+	}
+}
+
+void slow_print(const string& message, int time)
+{
+	// Range loops are "for each" constructs; here: for each character in the string
+	for (const char c : message)
+	{
+		// flush is used to make sure the buffer is emptied to the terminal immediately
+		cout << c << flush;
+		// Ask the thread to sleep for at least n millis.
+		Sleep(time);
+	}
+}
+
+int Modulus(int iN, int iMod) 
+{
+	int iQ = (iN / iMod);
+	return iN - (iQ*iMod);
+}
+
+char GetChar(int iGenerator, char cBase, int iRange) {
+	return (cBase + Modulus(iGenerator, iRange));
+}
+
+int MatrixEffect()
+{
+	// Color code
+	HANDLE  hConsole;
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsole, 12);
+
+	char caRow[80];
+	int j = 7;
+	int k = 2;
+	int l = 5;
+	int m = 1;
+	for(int count = 0; count <350; count++)
+	{
+		int i = 0;
+		// Output a random row of characters
+		while (i <80) 
+		{
+			if (caRow[i] != ' ') 
+			{
+				caRow[i] = GetChar(j + i * i, 33, 30);
+				if (((i*i + k) % 71) == 0) 
+				{
+					SetConsoleTextAttribute(hConsole, 7);
+				}
+				else
+				{
+					SetConsoleTextAttribute(hConsole, 12);
+				}
+			}
+			std::cout << caRow[i];
+			++i;
+			SetConsoleTextAttribute(hConsole, 12);
+		}
+		j = (j + 31);
+		k = (k + 17);
+		l = (l + 47);
+		m = (m + 67);
+		caRow[Modulus(j, 80)] = '-';
+		caRow[Modulus(k, 80)] = ' ';
+		caRow[Modulus(l, 80)] = '-';
+		caRow[Modulus(m, 80)] = ' ';
+		// Delay
+		Sleep(3);
+	}
+	SetConsoleTextAttribute(hConsole, 10);
+	Sleep(2000);
+	return 0;
+}
+
+void SecureConnection()
+{
+	slow_print("GOP_SECURE_SYSTEMS_v3.2654.2\n", 100);
+	Sleep(3000);
+	slow_print("Scanning Hardrive for threats...", 100);
+	Sleep(4000);
+	slow_print("\nScan Complete - No Threats Discovered...\nPreparing to establish secure connection...", 60);
+	slow_print("\nSpoofing IP Address...", 50);
+	Sleep(2000);
+	MatrixEffect();
+	system("cls");
+	cout << "GOP_SECURE_SYSTEMS_v3.2654.2\nSpoofing IP Address...";
+	Sleep(1000);
+	slow_print("COMPLETED", 100);
+	slow_print("\nSpoofing MAC Address...", 50);
+	Sleep(2000);
+	MatrixEffect();
+	system("cls");
+	cout << "GOP_SECURE_SYSTEMS_v3.2654.2\nSpoofing IP Address...COMPLETED\nSpoofing MAC Address...";
+	Sleep(1000);
+	slow_print("COMPLETED", 100);
+	slow_print("\nWARNING: LEVEL 5 Authorization Needed", 100);
+	Sleep(2500);
+	slow_print(" - Permission Granted", 100);
+	Sleep(3000);
+	system("CLS");
+	system("COLOR 0A");
+	return;
+}
+
+void DisplayHeader()
+{
+	system("CLS");
+	HANDLE  hConsole; //color changing and text
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	FlushConsoleInputBuffer(hConsole);
+	SetConsoleTextAttribute(hConsole, 12);
+	cout << "\t\t\t\t\t\t\t\t\t/*----------------------------------------------------------------------------------*\\" << endl;
+	SetConsoleTextAttribute(hConsole, 14);
+	cout << "\t\t\t\t\t\t\t\t\t |\t\t\t           THE CODE MACHINE\t\t                     |" << endl;
+	SetConsoleTextAttribute(hConsole, 15);
+	cout << "\t\t\t\t\t\t\t\t\t |\t\t\t                  GOP\t\t                             |" << endl;
+	SetConsoleTextAttribute(hConsole, 14);
+	cout << "\t\t\t\t\t\t\t\t\t |\t\t\t       By: Raj, Garrett, Andrew\t\t                     |" << endl;
+	SetConsoleTextAttribute(hConsole, 9);
+	cout << "\t\t\t\t\t\t\t\t\t\\*-----------------------------------------------------------------------------------*/" << endl << endl << endl;
+	SetConsoleTextAttribute(hConsole, 10);//green
+	return;
+}
+
+void Loading(string message)
+{
+	DisplayHeader();
+	cout << "\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tYour message is being "<< message << "...\n\n";
+	char a = 177, b = 219;
+	cout << "\t\t\t\t\t\t\t\t\t\t\t";
+	for (int i = 0; i <= 50; i++)
+		cout << a;
+	cout << "\r";
+	cout << "\t\t\t\t\t\t\t\t\t\t\t";
+	for (int i = 0; i <= 50; i++)
+	{
+		cout << b;
+		for (int j = 0; j <= 100000000; j++); //You can also use sleep function instead of for loop
+	}
+	return;
+}
+
+
 void AnimateRocketShip()// Displays rocket
 {
 	int i = 0;
@@ -9,7 +162,7 @@ void AnimateRocketShip()// Displays rocket
 	SetConsoleTextAttribute(hConsole, 12);
 	system("cls");
 
-	for (int j = 5; j >= i; j--)
+	for (int j = 20; j >= i; j--)
 		cout << endl;
 	//displays the rocketship through the power of cut & paste
 	cout << "\t\t\t\t\t\t\t\t\t\t\t        +" << endl;
@@ -383,27 +536,34 @@ void Intro()	//Displays Intro and User Prompt
 		for (int j = 0; j < 7; j++)
 			cout << "\t";
 		if (i == 0)
-			cout << "Hello! Welcome to the Code Machine, brought to you by Gods of Programming. " << endl;
-
+		{
+			string message = "Hello! Welcome to the Code Machine, brought to you by Gods of Programming.\n";
+				slow_print(message);
+		}
+			
 		else if (i == 1)
 		{
 			SetConsoleTextAttribute(hConsole, 12);
-			cout << "Using complicated, secret encryption and decryption methods, this program will take " << endl;
+			string message = "Using complicated, secret encryption and decryption methods, this program will take \n";
+			slow_print(message);
 		}
 		else if (i == 2)
 		{
 			SetConsoleTextAttribute(hConsole, 15);
-			cout << "in your message and convert it to cipher text stored in a file. The program also decrypts " << endl;
+			string message = "in your message and convert it to cipher text stored in a file. The program also decrypts \n";
+			slow_print(message);
 		}
 		else if (i == 3)
 		{
 			SetConsoleTextAttribute(hConsole, 9);
-			cout << "a message that has been sent to you from a user of The Code Machine. We hope you have a " << endl;
+			string message = "a message that has been sent to you from a user of The Code Machine. We hope you have a  \n";
+			slow_print(message);
 		}
 		else
 		{
 			SetConsoleTextAttribute(hConsole, 14);
-			cout << "great experience using this program!";
+			string message = "great experience using this program!";
+			slow_print(message);
 		}
 
 	}
@@ -422,5 +582,6 @@ void EncryptionUI()	//Function that displays all of the UI
 	Presents();
 	TheCodeMachine();
 	Intro();
+	SecureConnection();
 	return;
 }
