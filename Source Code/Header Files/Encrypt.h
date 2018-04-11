@@ -151,5 +151,3 @@ void RunEncrypt()
 	cout << "\n\n\n     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder...\n";
 	return;
 }
-
-
