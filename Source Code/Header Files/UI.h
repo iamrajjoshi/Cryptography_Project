@@ -93,7 +93,7 @@ void SecureConnection()
 	cout << "GOP_SECURE_SYSTEMS_v3.2654.2\nSpoofing IP Address...COMPLETED\nSpoofing MAC Address...";
 	Sleep(1000);
 	slow_print("COMPLETED", 100);
-	slow_print("\nWARNING: LEVEL 5 Authorization Needed", 100);
+	slow_print("\nWARNING: LEVEL 5 Authorization Required", 100);
 	Sleep(2500);
 	slow_print(" - Permission Granted", 100);
 	Sleep(3000);

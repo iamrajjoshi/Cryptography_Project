@@ -76,7 +76,9 @@ START:
 		ch = _getch();
 	}
 	for (unsigned int i = 0; i < pass.length(); i++)
-		pass[i] -= key;
+			pass[i] -= key;
+	
+
 
 	if (passAfter != pass)
 	{

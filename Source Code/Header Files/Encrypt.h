@@ -93,7 +93,6 @@ string OutputFileName()
 	return name;
 }
 
-
 void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> messagevector) // a function that copies the encrypted message to the file
 {
 	ofstream cypherFile;
@@ -162,13 +161,14 @@ START: string input;
 	}
 	goto START;
 }
+
 string Password(int passkey)
 {
 	string password = "";
-	cout << "     Enter a password (Letters Only): ";
+	cout << "     Enter a password (Letters Only) [16 Letters Max]: ";
 	char ch;
 	ch = _getch();
-	while (ch != 13 && ch >= 65 || ch == '\b') {//character 13 is enter
+	while ((ch != 13 && ch >= 65 || ch == '\b') && (password.length() <= 16)) {//character 13 is enter
 		if (ch == '\b')
 		{
 			if (password != "")
@@ -176,7 +176,7 @@ string Password(int passkey)
 				cout << "\b \b";
 				password.pop_back();
 			}
-				
+
 		}
 		else
 		{
@@ -186,7 +186,8 @@ string Password(int passkey)
 		ch = _getch();
 	}
 	for (unsigned int i = 0; i < password.length(); i++)
-		password[i] += passkey;
+			password[i] += passkey;
+
 	cout << endl;
 	return password;
 }
@@ -194,13 +195,11 @@ string Password(int passkey)
 int PasswordKey()
 {
 	srand(static_cast <unsigned int>(time(0)));
-	int n = 2 + rand() % 30;
-	n = -1 *(n);
-	if (n == -1)
-		return n - 1;
-	else
-		return n;
+	int n = 2 + rand() % 39;
+	n = -1 * (n);
+	return n;
 }
+
 void RunEncrypt()
 {
 	string password;

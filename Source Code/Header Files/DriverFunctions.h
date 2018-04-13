@@ -7,7 +7,6 @@ void RunUserInterface()
 	return;
 }
 
-
 string PromptUser()
 {
 	string entry;
