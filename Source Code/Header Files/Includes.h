@@ -11,6 +11,7 @@
 #include <filesystem>
 #include <dos.h>
 #include <conio.h>
+#include <atlstr.h>  
 
 using namespace std;
 namespace fs = std::experimental::filesystem;

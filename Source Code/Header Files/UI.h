@@ -1,17 +1,5 @@
 #pragma once
 
-void slow_print(const string& message)
-{
-	// Range loops are "for each" constructs; here: for each character in the string
-	for (const char c : message)
-	{
-		// flush is used to make sure the buffer is emptied to the terminal immediately
-		cout << c << flush;
-		// Ask the thread to sleep for at least n millis.
-		Sleep(30);
-	}
-}
-
 void slow_print(const string& message, int time)
 {
 	// Range loops are "for each" constructs; here: for each character in the string
@@ -538,32 +526,32 @@ void Intro()	//Displays Intro and User Prompt
 		if (i == 0)
 		{
 			string message = "Hello! Welcome to the Code Machine, brought to you by Gods of Programming.\n";
-				slow_print(message);
+				slow_print(message, 30 );
 		}
 			
 		else if (i == 1)
 		{
 			SetConsoleTextAttribute(hConsole, 12);
 			string message = "Using complicated, secret encryption and decryption methods, this program will take \n";
-			slow_print(message);
+			slow_print(message,30);
 		}
 		else if (i == 2)
 		{
 			SetConsoleTextAttribute(hConsole, 15);
 			string message = "in your message and convert it to cipher text stored in a file. The program also decrypts \n";
-			slow_print(message);
+			slow_print(message, 30);
 		}
 		else if (i == 3)
 		{
 			SetConsoleTextAttribute(hConsole, 9);
 			string message = "a message that has been sent to you from a user of The Code Machine. We hope you have a  \n";
-			slow_print(message);
+			slow_print(message, 30);
 		}
 		else
 		{
 			SetConsoleTextAttribute(hConsole, 14);
 			string message = "great experience using this program!";
-			slow_print(message);
+			slow_print(message, 30);
 		}
 
 	}

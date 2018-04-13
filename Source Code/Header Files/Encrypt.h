@@ -90,9 +90,9 @@ string OutputFileName()
 	string name;
 	cout << "     Please enter the name of the file you want to save the message in [Don't add extention .txt] : ";
 	cin >> name;
-	//cout << "     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder..." << endl;
 	return name;
 }
+
 
 void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> messagevector) // a function that copies the encrypted message to the file
 {
@@ -109,20 +109,25 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 		for (int j = 0; j < 3; j++)
 			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
 	cypherFile.close();
+	std::wstring To(name.begin(), name.end());
+	LPCWSTR Last = To.c_str();
+	DWORD dwFileAttributes = FILE_ATTRIBUTE_HIDDEN;
+	SetFileAttributes(Last, 2);
+	Loading("encrypted");
+	cout << "\n\n\n     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder...\n";
 	return;
 }
-void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> messagevector, vector<vector<int>> password, vector<int> rawpass) // a function that copies the encrypted message to the file
+
+void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> messagevector, string password, int passkey) // a function that copies the encrypted message to the file
 {
+
 	ofstream cypherFile;
 	if (!fs::exists("Encrypted_Files"))// Check if source folder exists
 		fs::create_directory("Encrypted_Files"); // create source folder
 	name = "Encrypted_Files//" + name + ".txt";
 	cypherFile.open(name);
-	cypherFile << rawpass.size() << endl;
-	for (unsigned int i = 0; i < (rawpass.size() / 3); i++)
-		for (int j = 0; j < 3; j++)
-			cypherFile << password[i][j] << " "; // types in the encrypted message
-	cypherFile << endl;
+	cypherFile << passkey << endl;
+	cypherFile << password << endl;
 	for (int i = 0; i < 3; i++)
 		for (int j = 0; j < 3; j++)
 			cypherFile << key[j][i] << " "; // types in the key
@@ -131,23 +136,95 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 		for (int j = 0; j < 3; j++)
 			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
 	cypherFile.close();
+	std::wstring To(name.begin(), name.end());
+	LPCWSTR Last = To.c_str();
+	DWORD dwFileAttributes = FILE_ATTRIBUTE_HIDDEN;
+	SetFileAttributes(Last, 2);
+	Loading("encrypted");
+	cout << "\n\n\n     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder...\n";
 	return;
 }
 
+bool PasswordorNot()
+{
+	cout << "     Would you like to password protect the file? [Y/N]: ";
+
+START: string input;
+	cin >> input;
+	if (input == "YES" || input == "yes" || input == "Y" || input == "y")
+		return true;
+	else if (input == "NO" || input == "no" || input == "N" || input == "n")
+		return false;
+	else
+	{
+		cout << "     Invalid Input!" << endl << "     ";
+		system("pause");
+	}
+	goto START;
+}
+string Password(int passkey)
+{
+	string password = "";
+	cout << "     Enter a password (Letters Only): ";
+	char ch;
+	ch = _getch();
+	while (ch != 13 && ch >= 65 || ch == '\b') {//character 13 is enter
+		if (ch == '\b')
+		{
+			if (password != "")
+			{
+				cout << "\b \b";
+				password.pop_back();
+			}
+				
+		}
+		else
+		{
+			password.push_back(ch);
+			cout << '*';
+		}
+		ch = _getch();
+	}
+	for (unsigned int i = 0; i < password.length(); i++)
+		password[i] += passkey;
+	cout << endl;
+	return password;
+}
+
+int PasswordKey()
+{
+	srand(static_cast <unsigned int>(time(0)));
+	int n = 2 + rand() % 30;
+	n = -1 *(n);
+	if (n == -1)
+		return n - 1;
+	else
+		return n;
+}
 void RunEncrypt()
 {
+	string password;
+	bool passornot;
 	vector<vector<int>> key(3, vector<int>(3));
 	vector <int> messagevector;
 	vector<vector<int>> product(100000, vector<int>(3));
 	vector <int> rawpass;
 	vector <vector<int>> finalpass(100000, vector<int>(3));
+	int passkey;
 
 	key = MatrixKey();
 	messagevector = getMessage();
+	passornot = PasswordorNot();
 	product = MatrixMultiplication(key, GroupMessage(messagevector), messagevector);
-
-	WriteToFile(OutputFileName(), InverseMatrix(key), product, messagevector);
-	Loading("encrypted");
-	cout << "\n\n\n     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder...\n";
+	if (passornot == true)
+	{
+		passkey = PasswordKey();
+		password = Password(passkey);
+		WriteToFile(OutputFileName(), InverseMatrix(key), product, messagevector, password, passkey);
+	}
+	else
+	{
+		WriteToFile(OutputFileName(), InverseMatrix(key), product, messagevector);
+	}
 	return;
 }
