@@ -309,9 +309,7 @@ void CompanyName()													//Company Name
 		}
 
 		for (int j = 0; j < 11; j++)
-		{
 			cout << "\t";
-		}
 
 		if (k == 0)
 		{
@@ -553,7 +551,6 @@ void Intro()	//Displays Intro and User Prompt
 			string message = "great experience using this program!";
 			slow_print(message, 30);
 		}
-
 	}
 	Sleep(7000);
 	system("CLS");

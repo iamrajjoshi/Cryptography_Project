@@ -1,5 +1,5 @@
 #pragma once
-#undef max
+#undef max 
 
 string InputFileName() {
 	string nameoffile;
@@ -10,7 +10,7 @@ string InputFileName() {
 	inputFile.open(nameoffile);
 	if (!inputFile) {
 		cout << "\t";
-		cout << "The file cannot be open. It does not exist or we don't have permission to open the file!" << endl << "     ";
+		cout << "The file cannot be opened. It does not exist or we don't have permission to open the file!" << endl << "     ";
 		exit(1);
 	}
 	return nameoffile;
@@ -20,16 +20,13 @@ bool CheckforPassword(string nameoffile)
 {
 	int test;
 	ifstream inputFile;
-
 	bool ispass = true;
 	inputFile.open(nameoffile);
 	inputFile >> test;
-
 	if (test != -1)
 		ispass = true;
 	else
 		ispass = false;
-
 	return ispass;
 }
 
@@ -51,24 +48,20 @@ START:
 	if (count > 5)
 	{
 		DisplayHeader();
-		cout << "     You have enter the wrong password too many times! Quitting in 3 seconds!" << endl << "     ";
-		Sleep(3000);
+		cout << "     You have enter the wrong password too many times! Quitting!..." << endl << "     ";
+		Sleep(1000);
 		exit(1);
 	}
 	string passAfter = "";
 	char ch;
 	ch = _getch();
 	while (ch != 13 && ch >= 65 || ch == '\b') {//character 13 is enter
-		if (ch == '\b')
+		if (ch == '\b' && passAfter != "")
 		{
-			if (passAfter != "")
-			{
-				cout << "\b \b";
-				passAfter.pop_back();
-			}
-
+			cout << "\b \b";
+			passAfter.pop_back();
 		}
-		else
+		else if(ch != '\b')
 		{
 			passAfter.push_back(ch);
 			cout << '*';
@@ -76,10 +69,7 @@ START:
 		ch = _getch();
 	}
 	for (unsigned int i = 0; i < pass.length(); i++)
-			pass[i] -= key;
-	
-
-
+		pass[i] -= key;
 	if (passAfter != pass)
 	{
 		DisplayHeader();
@@ -89,10 +79,10 @@ START:
 	else
 	{
 		cout << endl << "     The password is correct!" << endl;
-		Sleep(1000);
+		Sleep(1000); 
+		inputFile.close();
+		return;
 	}
-	return;
-	inputFile.close();
 }
 
 vector<vector<int>> ReadInverseMatrix(string nameoffile, bool ispass) { // reads the users input 
@@ -152,20 +142,20 @@ void DisplayMessage(vector<vector<int>> product, int sizeofmessage)
 	cout << "\n\n     Decrypted Message: ";
 	for (int i = 0; i < sizeofmessage / 3; i++)
 		for (int j = 0; j < 3; j++) // displays characters one by one
-		{
 			if ((ascii = product[i][j]) != 0)
-			{
 				message += ascii;
-			}
-		}
 	message += '\0';
 	slow_print(message, 50);
 	cout << endl;
+	return;
 }
 
 void RunDecrypt()
 {
 	string nameoffile = InputFileName();
+	std::wstring To(nameoffile.begin(), nameoffile.end());
+	LPCWSTR Last = To.c_str();
+	SetFileAttributes(Last, FILE_ATTRIBUTE_NORMAL);
 	bool ispass;
 	int sizeofmessage;
 	string password;
@@ -184,5 +174,6 @@ void RunDecrypt()
 	product = MatrixMultiplication(inversematrix, encryptedmessage, sizeofmessage);
 
 	DisplayMessage(product, sizeofmessage);
+	SetFileAttributes(Last, FILE_ATTRIBUTE_HIDDEN);
 	return;
 }
