@@ -32,6 +32,8 @@ bool CheckforPassword(string nameoffile)
 
 void EnterPassword(string nameoffile)
 {
+	std::wstring To(nameoffile.begin(), nameoffile.end());
+	LPCWSTR Last = To.c_str();
 	int count = 0;
 	int key;
 	ifstream inputFile;
@@ -49,6 +51,7 @@ START:
 	{
 		DisplayHeader();
 		cout << "     You have enter the wrong password too many times! Quitting!..." << endl << "     ";
+		SetFileAttributes(Last, FILE_ATTRIBUTE_HIDDEN);
 		Sleep(1000);
 		exit(1);
 	}

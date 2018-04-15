@@ -2,74 +2,37 @@
 
 void slow_print(const string& message, int time)
 {
-	// Range loops are "for each" constructs; here: for each character in the string
 	for (const char c : message)
 	{
-		// flush is used to make sure the buffer is emptied to the terminal immediately
-		cout << c << flush;
-		// Ask the thread to sleep for at least n millis.
+		cout << c;
 		Sleep(time);
 	}
 }
 
-int Modulus(int iN, int iMod) 
+void MatrixEffect()
 {
-	int iQ = (iN / iMod);
-	return iN - (iQ*iMod);
-}
-
-char GetChar(int iGenerator, char cBase, int iRange) {
-	return (cBase + Modulus(iGenerator, iRange));
-}
-
-int MatrixEffect()
-{
-	// Color code
 	HANDLE  hConsole;
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, 12);
-
-	char caRow[80];
-	int j = 7;
-	int k = 2;
-	int l = 5;
-	int m = 1;
-	for(int count = 0; count <350; count++)
+	srand(static_cast <unsigned int>(time(0)));
+	for (int i = 0; i < 35000; i++)
 	{
-		int i = 0;
-		// Output a random row of characters
-		while (i <80) 
+		int w = 1 + rand() % 25;
+		if (w == 1)
 		{
-			if (caRow[i] != ' ') 
-			{
-				caRow[i] = GetChar(j + i * i, 33, 30);
-				if (((i*i + k) % 71) == 0) 
-				{
-					SetConsoleTextAttribute(hConsole, 7);
-				}
-				else
-				{
-					SetConsoleTextAttribute(hConsole, 12);
-				}
-			}
-			std::cout << caRow[i];
-			++i;
-			SetConsoleTextAttribute(hConsole, 12);
+			SetConsoleTextAttribute(hConsole, 7);
+			char n = 32 + rand() % 94;
+			cout << " " << n;
 		}
-		j = (j + 31);
-		k = (k + 17);
-		l = (l + 47);
-		m = (m + 67);
-		caRow[Modulus(j, 80)] = '-';
-		caRow[Modulus(k, 80)] = ' ';
-		caRow[Modulus(l, 80)] = '-';
-		caRow[Modulus(m, 80)] = ' ';
-		// Delay
-		Sleep(3);
+		else
+		{
+			SetConsoleTextAttribute(hConsole, 12);
+			char n = 32 + rand() % 94;
+			cout << n;
+		}
 	}
 	SetConsoleTextAttribute(hConsole, 10);
 	Sleep(2000);
-	return 0;
+	return;
 }
 
 void SecureConnection()
@@ -125,8 +88,8 @@ void DisplayHeader()
 void Loading(string message)
 {
 	DisplayHeader();
-	cout << "\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tYour message is being "<< message << "...\n\n";
-	char a = 177, b = 219;
+	cout << "\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tYour message is being " << message << "...\n\n";
+	char a = 176, b = 219;
 	cout << "\t\t\t\t\t\t\t\t\t\t\t";
 	for (int i = 0; i <= 50; i++)
 		cout << a;
@@ -135,7 +98,7 @@ void Loading(string message)
 	for (int i = 0; i <= 50; i++)
 	{
 		cout << b;
-		for (int j = 0; j <= 100000000; j++); //You can also use sleep function instead of for loop
+		Sleep(150);
 	}
 	return;
 }
@@ -524,14 +487,14 @@ void Intro()	//Displays Intro and User Prompt
 		if (i == 0)
 		{
 			string message = "Hello! Welcome to the Code Machine, brought to you by Gods of Programming.\n";
-				slow_print(message, 30 );
+			slow_print(message, 30);
 		}
-			
+
 		else if (i == 1)
 		{
 			SetConsoleTextAttribute(hConsole, 12);
 			string message = "Using complicated, secret encryption and decryption methods, this program will take \n";
-			slow_print(message,30);
+			slow_print(message, 30);
 		}
 		else if (i == 2)
 		{

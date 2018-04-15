@@ -54,7 +54,7 @@ vector<vector<int>> GroupMessage(vector <int> messagevector) // Checks how many 
 	return grouped;
 }
 
-vector<vector<int>> MatrixKey() // generates a random key 
+vector<vector<int>> MatrixKey() // generates a random key (unimodular matrix)
 {
 	vector<vector<int>> key(3, vector<int>(3));
 	srand(static_cast <unsigned int>(time(0)));
@@ -94,14 +94,14 @@ string OutputFileName()
 }
 
 void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> messagevector) // a function that copies the encrypted message to the file
-{
-	std::wstring To(name.begin(), name.end());
-	LPCWSTR Last = To.c_str();
-	SetFileAttributes(Last, FILE_ATTRIBUTE_NORMAL);
+{	
 	ofstream cypherFile;
 	if (!fs::exists("Encrypted_Files"))// Check if source folder exists
 		fs::create_directory("Encrypted_Files"); // create source folder
 	name = "Encrypted_Files//" + name + ".txt";
+	std::wstring To(name.begin(), name.end());
+	LPCWSTR Last = To.c_str();
+	SetFileAttributes(Last, FILE_ATTRIBUTE_NORMAL);
 	cypherFile.open(name);
 	for (int i = 0; i < 3; i++)
 		for (int j = 0; j < 3; j++)
@@ -128,8 +128,6 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 	LPCWSTR Last = To.c_str();
 	SetFileAttributes(Last, FILE_ATTRIBUTE_NORMAL);
 	cypherFile.open(name);
-	if (!cypherFile)
-		cout << "ERROROROROROROR";
 	cypherFile << passkey << endl;
 	cypherFile << password << endl;
 	for (int i = 0; i < 3; i++)
@@ -208,8 +206,9 @@ void RunEncrypt()
 
 	key = MatrixKey();
 	messagevector = getMessage();
-	passornot = PasswordorNot();
 	product = MatrixMultiplication(key, GroupMessage(messagevector), messagevector);
+
+	passornot = PasswordorNot();
 	if (passornot == true)
 	{
 		passkey = PasswordKey();
@@ -218,6 +217,5 @@ void RunEncrypt()
 	}
 	else
 		WriteToFile(OutputFileName(), InverseMatrix(key), product, messagevector);
-
 	return;
 }
