@@ -2,7 +2,7 @@
 
 void Driver()
 {
-	//RunUserInterface();
+	RunUserInterface();
 	do
 	{
 		DisplayHeader();
