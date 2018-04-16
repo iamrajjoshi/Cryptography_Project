@@ -140,7 +140,7 @@ vector<vector<int>> ReadMessage(string nameoffile, int sizeofmessage, bool ispas
 void DisplayMessage(vector<vector<int>> product, int sizeofmessage)
 {
 	char ascii;
-	string message = " ";
+	string message = "";
 	Loading("decrypted");
 	cout << "\n\n     Decrypted Message: ";
 	for (int i = 0; i < sizeofmessage / 3; i++)
