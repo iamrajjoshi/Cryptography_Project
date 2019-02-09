@@ -21,3 +21,5 @@ namespace fs = std::experimental::filesystem;
 #include "Decrypt.h"
 #include "DriverFunctions.h"
 #include "Driver.h"
+
+#define UI

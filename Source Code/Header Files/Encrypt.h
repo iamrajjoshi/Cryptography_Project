@@ -1,5 +1,4 @@
 #pragma once
-
 vector <int> getMessage() // receives the user's message
 {
 	vector <int> messagevector;
@@ -96,11 +95,15 @@ string OutputFileName()
 void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encrypted, vector <int> messagevector) // a function that copies the encrypted message to the file
 {	
 	ofstream cypherFile;
+	string folder = "Encrypted_Files";
+	std::wstring To(folder.begin(), folder.end());
+	LPCWSTR Laste = To.c_str();
+	SetFileAttributes(Laste, FILE_ATTRIBUTE_NORMAL);
 	if (!fs::exists("Encrypted_Files"))// Check if source folder exists
 		fs::create_directory("Encrypted_Files"); // create source folder
 	name = "Encrypted_Files//" + name + ".txt";
-	std::wstring To(name.begin(), name.end());
-	LPCWSTR Last = To.c_str();
+	std::wstring Toe(name.begin(), name.end());
+	LPCWSTR Last = Toe.c_str();
 	SetFileAttributes(Last, FILE_ATTRIBUTE_NORMAL);
 	cypherFile.open(name);
 	for (int i = 0; i < 3; i++)
@@ -111,9 +114,12 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 		for (int j = 0; j < 3; j++)
 			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
 	cypherFile.close();
+#ifdef UI
 	Loading("encrypted");
+#endif	
 	cout << "\n\n\n     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder...\n";
 	SetFileAttributes(Last, FILE_ATTRIBUTE_HIDDEN);
+	SetFileAttributes(Laste, FILE_ATTRIBUTE_HIDDEN);
 	return;
 }
 
@@ -121,11 +127,15 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 {
 
 	ofstream cypherFile;
+	string folder = "Encrypted_Files";
+	std::wstring To(folder.begin(), folder.end());
+	LPCWSTR Laste = To.c_str();
+	SetFileAttributes(Laste, FILE_ATTRIBUTE_NORMAL);
 	if (!fs::exists("Encrypted_Files"))// Check if source folder exists
 		fs::create_directory("Encrypted_Files"); // create source folder
 	name = "Encrypted_Files//" + name + ".txt";
-	std::wstring To(name.begin(), name.end());
-	LPCWSTR Last = To.c_str();
+	std::wstring Toe(name.begin(), name.end());
+	LPCWSTR Last = Toe.c_str();
 	SetFileAttributes(Last, FILE_ATTRIBUTE_NORMAL);
 	cypherFile.open(name);
 	cypherFile << passkey << endl;
@@ -138,9 +148,12 @@ void WriteToFile(string name, vector<vector<int>> key, vector<vector<int>> encry
 		for (int j = 0; j < 3; j++)
 			cypherFile << encrypted[i][j] << " "; // types in the encrypted message
 	cypherFile.close();
+#ifdef UI
 	Loading("encrypted");
+#endif
 	cout << "\n\n\n     Your message has been encrypted and saved in a text file. It is located in the \"Encrypted_Files\" folder...\n";
 	SetFileAttributes(Last, FILE_ATTRIBUTE_HIDDEN);
+	SetFileAttributes(Laste, FILE_ATTRIBUTE_HIDDEN);
 	return;
 }
 

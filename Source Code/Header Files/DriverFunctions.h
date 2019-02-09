@@ -2,7 +2,9 @@
 
 void RunUserInterface()
 {
+#ifdef UI
 	PlaySound(TEXT("Avengers.wav"), NULL, SND_FILENAME | SND_LOOP | SND_ASYNC); // background music
+#endif
 	EncryptionUI();
 	return;
 }

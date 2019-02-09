@@ -1,10 +1,14 @@
 #pragma once
 #undef max 
-
+#define UI
 string InputFileName() {
 	string nameoffile;
 	cout << "     What is the name of the file? ";
 	cin >> nameoffile;
+	string folder = "Encrypted Files";
+	std::wstring To(folder.begin(), folder.end());
+	LPCWSTR Laste = To.c_str();
+	SetFileAttributes(Laste, FILE_ATTRIBUTE_NORMAL);
 	nameoffile = ("Encrypted_Files//" + nameoffile + ".txt");
 	ifstream inputFile;
 	inputFile.open(nameoffile);
@@ -141,7 +145,9 @@ void DisplayMessage(vector<vector<int>> product, int sizeofmessage)
 {
 	char ascii;
 	string message = "";
+#ifdef UI
 	Loading("decrypted");
+#endif
 	cout << "\n\n     Decrypted Message: ";
 	for (int i = 0; i < sizeofmessage / 3; i++)
 		for (int j = 0; j < 3; j++) // displays characters one by one
@@ -159,6 +165,10 @@ void RunDecrypt()
 	std::wstring To(nameoffile.begin(), nameoffile.end());
 	LPCWSTR Last = To.c_str();
 	SetFileAttributes(Last, FILE_ATTRIBUTE_NORMAL);
+	string folder = "Encrypted_Files";
+	std::wstring Toe(folder.begin(), folder.end());
+	LPCWSTR Laste = Toe.c_str();
+	
 	bool ispass;
 	int sizeofmessage;
 	string password;
@@ -178,5 +188,6 @@ void RunDecrypt()
 
 	DisplayMessage(product, sizeofmessage);
 	SetFileAttributes(Last, FILE_ATTRIBUTE_HIDDEN);
+	SetFileAttributes(Laste, FILE_ATTRIBUTE_HIDDEN);
 	return;
 }
